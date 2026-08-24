@@ -5,7 +5,7 @@
   "description": "Official Agent Marketplace catalog repository",
   "type": "module",
   "scripts": {
-    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "test": "node --test --test-concurrency=1",
     "validate": "node scripts/validate.js",
     "build:index": "node scripts/build-index.js",
     "search": "node scripts/search.js",
