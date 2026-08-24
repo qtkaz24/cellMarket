@@ -43,7 +43,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"],
+      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development", "marketing", "personal", "sales", "success"],
       "description": "Category for human organization. NOT part of the canonical identity."
     },
     "tags": {
@@ -231,6 +231,35 @@
         }
       },
       "description": "Platform compatibility constraints."
+    },
+    "integrations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "Integration name (e.g. 'GitHub', 'Slack', 'Gmail')."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Integration homepage URL."
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "What this integration provides."
+          }
+        }
+      },
+      "maxItems": 20,
+      "uniqueItems": true,
+      "description": "External services this agent integrates with."
     }
   },
   "$defs": {

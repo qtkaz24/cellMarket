@@ -1,0 +1,75 @@
+{
+  "id": "agent.automation-scout",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Automation Scout",
+  "description": "Set up a new bot for me that finds its own job.",
+  "longDescription": "Set up a new bot for me that finds its own job. Walk me through connecting Slack, Notion, GitHub and Linear, then let it inspect my history across all four: find the repetitive work I do without noticing, and propose two automations — what triggers, what runs, what I'd save — without me describing anything first. Ask me only what it can't infer, write both proposals up for my review, then save the one I pick as its first real task.",
+  "category": "productivity",
+  "tags": [
+    "slack",
+    "notion",
+    "github",
+    "linear",
+    "productivity"
+  ],
+  "author": {
+    "name": "ericzakariasson",
+    "url": "https://x.com/ericzakariasson"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Automation Scout icon"
+    }
+  },
+  "agent": {
+    "role": "Automation Scout",
+    "instructions": "Set up a new bot for me that finds its own job. Walk me through connecting Slack, Notion, GitHub and Linear, then let it inspect my history across all four: find the repetitive work I do without noticing, and propose two automations — what triggers, what runs, what I'd save — without me describing anything first. Ask me only what it can't infer, write both proposals up for my review, then save the one I pick as its first real task.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "slack",
+        "description": "Integration with Slack",
+        "required": false
+      },
+      {
+        "name": "notion",
+        "description": "Integration with Notion",
+        "required": false
+      },
+      {
+        "name": "github",
+        "description": "Integration with GitHub",
+        "required": false
+      },
+      {
+        "name": "linear",
+        "description": "Integration with Linear",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.write"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Slack"
+    },
+    {
+      "name": "Notion"
+    },
+    {
+      "name": "GitHub"
+    },
+    {
+      "name": "Linear"
+    }
+  ]
+}

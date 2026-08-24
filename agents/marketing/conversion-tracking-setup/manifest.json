@@ -1,0 +1,43 @@
+{
+  "id": "agent.conversion-tracking-setup",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Conversion Tracking Setup",
+  "description": "Set up a new bot for me that gets conversion tracking working on my website using Converly.",
+  "longDescription": "Set up a new bot for me that gets conversion tracking working on my website using Converly. Walk me through connecting Converly (a new account comes with a free trial), then ask me which website, which form tool the site uses, and which ad platforms should get the conversions, like Google Ads, Meta, GA4, LinkedIn or TikTok. Build the conversion flow in Converly, hand me the authorization link when an ad platform needs my login, give me the tracking snippet with instructions for my site builder, then publish the flow and verify it with a test conversion. Never ask me to paste ad platform passwords into chat, and report exactly what was verified and what still needs a real form submission to prove. Then save it so I can run it again for another site or ad platform.",
+  "category": "marketing",
+  "tags": [
+    "converly",
+    "marketing"
+  ],
+  "author": {
+    "name": "converlyio"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Conversion Tracking Setup icon"
+    }
+  },
+  "agent": {
+    "role": "Conversion Tracking Setup",
+    "instructions": "Set up a new bot for me that gets conversion tracking working on my website using Converly. Walk me through connecting Converly (a new account comes with a free trial), then ask me which website, which form tool the site uses, and which ad platforms should get the conversions, like Google Ads, Meta, GA4, LinkedIn or TikTok. Build the conversion flow in Converly, hand me the authorization link when an ad platform needs my login, give me the tracking snippet with instructions for my site builder, then publish the flow and verify it with a test conversion. Never ask me to paste ad platform passwords into chat, and report exactly what was verified and what still needs a real form submission to prove. Then save it so I can run it again for another site or ad platform.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "converly",
+        "description": "Integration with Converly",
+        "required": false
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Converly"
+    }
+  ]
+}

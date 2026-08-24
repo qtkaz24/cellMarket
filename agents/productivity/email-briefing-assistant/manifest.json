@@ -1,0 +1,49 @@
+{
+  "id": "agent.email-briefing-assistant",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Email Briefing Assistant",
+  "description": "Set up a new bot for me I can trigger each morning for an email briefing.",
+  "longDescription": "Set up a new bot for me I can trigger each morning for an email briefing. Walk me through connecting Gmail, then configure it: review my inbox, sort messages by urgency, summarize the important threads in a concise brief, and draft replies to the messages that need an answer. Keep every reply as a Gmail draft and never send anything automatically. Ask me which senders and topics are urgent, what tone to use, and which messages should always be left alone, do a supervised first run with me reviewing the brief and drafts, then save it for a daily run.",
+  "category": "productivity",
+  "tags": [
+    "gmail",
+    "productivity"
+  ],
+  "author": {
+    "name": "mrfundman",
+    "url": "https://x.com/mrfundman"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Email Briefing Assistant icon"
+    }
+  },
+  "agent": {
+    "role": "Email Briefing Assistant",
+    "instructions": "Set up a new bot for me I can trigger each morning for an email briefing. Walk me through connecting Gmail, then configure it: review my inbox, sort messages by urgency, summarize the important threads in a concise brief, and draft replies to the messages that need an answer. Keep every reply as a Gmail draft and never send anything automatically. Ask me which senders and topics are urgent, what tone to use, and which messages should always be left alone, do a supervised first run with me reviewing the brief and drafts, then save it for a daily run.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.read"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com"
+    }
+  ]
+}

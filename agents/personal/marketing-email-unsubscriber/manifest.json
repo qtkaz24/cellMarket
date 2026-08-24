@@ -1,0 +1,48 @@
+{
+  "id": "agent.marketing-email-unsubscriber",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Marketing Email Unsubscriber",
+  "description": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat.",
+  "longDescription": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat. Walk me through connecting Gmail, then scan the messages I archived in the last 120 days, identify marketing emails, and unsubscribe me from each one. Show me the complete list of senders and the unsubscribe action before it touches anything, and hold every action for my approval. Ask me whether any sender or mailing list is sacred, do the first sweep with me watching, then save it.",
+  "category": "personal",
+  "tags": [
+    "gmail",
+    "personal"
+  ],
+  "author": {
+    "name": "toddsaunders",
+    "url": "https://x.com/toddsaunders"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Marketing Email Unsubscriber icon"
+    }
+  },
+  "agent": {
+    "role": "Marketing Email Unsubscriber",
+    "instructions": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat. Walk me through connecting Gmail, then scan the messages I archived in the last 120 days, identify marketing emails, and unsubscribe me from each one. Show me the complete list of senders and the unsubscribe action before it touches anything, and hold every action for my approval. Ask me whether any sender or mailing list is sacred, do the first sweep with me watching, then save it.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com/"
+    }
+  ]
+}

@@ -1,8 +1,366 @@
 {
   "$schema": "schemas/index.schema.json",
-  "generatedAt": "2026-08-24T14:43:14.829Z",
-  "totalEntries": 4,
+  "generatedAt": "2026-08-24T15:11:52.418Z",
+  "totalEntries": 54,
   "entries": [
+    {
+      "id": "agent.ad-pacing-digest",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Ad Pacing Digest",
+      "description": "Set up a new bot for me that runs daily at 8:00am.",
+      "category": "marketing",
+      "tags": [
+        "apple-search-ads",
+        "slack",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/ad-pacing-digest",
+      "media": [
+        "agents/marketing/ad-pacing-digest/icon.svg"
+      ],
+      "checksum": "440001bd667f1956"
+    },
+    {
+      "id": "agent.affiliate-program-manager",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Affiliate Program Manager",
+      "description": "Set up a new bot for me in its own dedicated chat that operates my affiliate program as a practical affiliate manager.",
+      "category": "marketing",
+      "tags": [
+        "affonso",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/affiliate-program-manager",
+      "media": [
+        "agents/marketing/affiliate-program-manager/icon.svg"
+      ],
+      "checksum": "9862bef4a120703d"
+    },
+    {
+      "id": "agent.agent-work-logger",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Agent Work Logger",
+      "description": "Set up a new bot for me that automatically records my agents' work in ClickUp so tasks and decisions do not get lost.",
+      "category": "productivity",
+      "tags": [
+        "clickup",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/agent-work-logger",
+      "media": [
+        "agents/productivity/agent-work-logger/icon.svg"
+      ],
+      "checksum": "f63405f437acdcc9"
+    },
+    {
+      "id": "agent.automation-scout",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Automation Scout",
+      "description": "Set up a new bot for me that finds its own job.",
+      "category": "productivity",
+      "tags": [
+        "slack",
+        "notion",
+        "github",
+        "linear",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/automation-scout",
+      "media": [
+        "agents/productivity/automation-scout/icon.svg"
+      ],
+      "checksum": "6a8064ad6caac7ff"
+    },
+    {
+      "id": "agent.booking-pipeline-runner",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Booking Pipeline Runner",
+      "description": "Set up a new bot that keeps HubSpot deals and Soundcheck gigs in lockstep.",
+      "category": "sales",
+      "tags": [
+        "soundcheck",
+        "hubspot",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/booking-pipeline-runner",
+      "media": [
+        "agents/sales/booking-pipeline-runner/icon.svg"
+      ],
+      "checksum": "eb02d77c1c82e404"
+    },
+    {
+      "id": "agent.buyer-intent-reply-queue",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Buyer Intent Reply Queue",
+      "description": "Set up a new bot for me.",
+      "category": "marketing",
+      "tags": [
+        "hotmention",
+        "slack",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/buyer-intent-reply-queue",
+      "media": [
+        "agents/marketing/buyer-intent-reply-queue/icon.svg"
+      ],
+      "checksum": "d152118d9c29f85c"
+    },
+    {
+      "id": "agent.carousel-publisher",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Carousel Publisher",
+      "description": "You are my social content publisher.",
+      "category": "marketing",
+      "tags": [
+        "postnitro",
+        "linkedin",
+        "instagram",
+        "threads",
+        "tiktok",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/carousel-publisher",
+      "media": [
+        "agents/marketing/carousel-publisher/icon.svg"
+      ],
+      "checksum": "8abdf76c7c0e2e52"
+    },
+    {
+      "id": "agent.ci-code-review-bot",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "CI Code Review Bot",
+      "description": "Set up a new bot for me that reviews code in CI.",
+      "category": "productivity",
+      "tags": [
+        "github",
+        "github-actions",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/ci-code-review-bot",
+      "media": [
+        "agents/productivity/ci-code-review-bot/icon.svg"
+      ],
+      "checksum": "8ef7761fbfb06b6d"
+    },
+    {
+      "id": "agent.class-action-matcher",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Class Action Matcher",
+      "description": "Set up a new bot for me I can trigger for a class-action claim search.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/class-action-matcher",
+      "media": [
+        "agents/personal/class-action-matcher/icon.svg"
+      ],
+      "checksum": "e7b5f8817511ec3f"
+    },
+    {
+      "id": "agent.codebase-hardening-auditor",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Codebase Hardening Auditor",
+      "description": "Set up a new bot for me that audits a codebase that shipped fast and now needs hardening.",
+      "category": "devops",
+      "tags": [
+        "github",
+        "devops"
+      ],
+      "status": "active",
+      "path": "agents/devops/codebase-hardening-auditor",
+      "media": [
+        "agents/devops/codebase-hardening-auditor/icon.svg"
+      ],
+      "checksum": "3af97f2dab178eae"
+    },
+    {
+      "id": "agent.commission-leak-auditor",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Commission Leak Auditor",
+      "description": "Set up a new bot in its own chat that audits my affiliate program for commissions that went missing, and runs read-only unless I approve a change.",
+      "category": "devops",
+      "tags": [
+        "refgrow",
+        "devops"
+      ],
+      "status": "active",
+      "path": "agents/devops/commission-leak-auditor",
+      "media": [
+        "agents/devops/commission-leak-auditor/icon.svg"
+      ],
+      "checksum": "bd452e4c13bbefcd"
+    },
+    {
+      "id": "agent.competitor-ad-watch",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Competitor Ad Watch",
+      "description": "Set up a new bot that watches my competitors' ads.",
+      "category": "marketing",
+      "tags": [
+        "adlicio",
+        "slack",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/competitor-ad-watch",
+      "media": [
+        "agents/marketing/competitor-ad-watch/icon.svg"
+      ],
+      "checksum": "5dffe2adcd9e7c52"
+    },
+    {
+      "id": "agent.competitor-pricing-watch",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Competitor Pricing Watch",
+      "description": "Set up a new bot for me that checks every 6 hours.",
+      "category": "marketing",
+      "tags": [
+        "slack",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/competitor-pricing-watch",
+      "media": [
+        "agents/marketing/competitor-pricing-watch/icon.svg"
+      ],
+      "checksum": "38e447ab68c3ba61"
+    },
+    {
+      "id": "agent.content-idea-generator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Content Idea Generator",
+      "description": "Set up a new bot for me I can trigger for video and content ideas.",
+      "category": "marketing",
+      "tags": [
+        "youtube",
+        "google-trends",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/content-idea-generator",
+      "media": [
+        "agents/marketing/content-idea-generator/icon.svg"
+      ],
+      "checksum": "dd8b0a619aea3861"
+    },
+    {
+      "id": "agent.conversion-tracking-setup",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Conversion Tracking Setup",
+      "description": "Set up a new bot for me that gets conversion tracking working on my website using Converly.",
+      "category": "marketing",
+      "tags": [
+        "converly",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/conversion-tracking-setup",
+      "media": [
+        "agents/marketing/conversion-tracking-setup/icon.svg"
+      ],
+      "checksum": "68976946795f6ecb"
+    },
+    {
+      "id": "agent.critical-security-fixer",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Critical Security Fixer",
+      "description": "Set up a new bot for me that watches Aikido for critical security issues and opens GitHub pull requests to fix them.",
+      "category": "devops",
+      "tags": [
+        "aikido",
+        "github",
+        "devops"
+      ],
+      "status": "active",
+      "path": "agents/devops/critical-security-fixer",
+      "media": [
+        "agents/devops/critical-security-fixer/icon.svg"
+      ],
+      "checksum": "dbaab7023b58f2fa"
+    },
+    {
+      "id": "agent.daily-briefing",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Daily Briefing",
+      "description": "Set up a new bot for me.",
+      "category": "productivity",
+      "tags": [
+        "google-calendar",
+        "slack",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/daily-briefing",
+      "media": [
+        "agents/productivity/daily-briefing/icon.svg"
+      ],
+      "checksum": "a4404018e457434d"
+    },
+    {
+      "id": "agent.daily-focus-adviser",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Daily Focus Adviser",
+      "description": "Set up a new bot for me I can trigger each morning for a daily focus plan.",
+      "category": "productivity",
+      "tags": [
+        "google-calendar",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/daily-focus-adviser",
+      "media": [
+        "agents/productivity/daily-focus-adviser/icon.svg"
+      ],
+      "checksum": "f5523fc625501d99"
+    },
+    {
+      "id": "agent.deal-desk-autopilot",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Deal Desk Autopilot",
+      "description": "Set up a new bot for me I can trigger for deal momentum.",
+      "category": "sales",
+      "tags": [
+        "gmail",
+        "google-calendar",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/deal-desk-autopilot",
+      "media": [
+        "agents/sales/deal-desk-autopilot/icon.svg"
+      ],
+      "checksum": "22a41bc0b67a6566"
+    },
     {
       "id": "agent.deep-research",
       "type": "agent",
@@ -24,6 +382,80 @@
       "checksum": "c32480834e86b3ad"
     },
     {
+      "id": "agent.design-engineer",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Design Engineer",
+      "description": "Set up a new bot for me called Design Engineer that I can trigger whenever I need to turn an idea, brief, screenshot, sketch, existing design, or product feedback into a real editable artifact.",
+      "category": "productivity",
+      "tags": [
+        "magicpath",
+        "github",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/design-engineer",
+      "media": [
+        "agents/productivity/design-engineer/icon.svg"
+      ],
+      "checksum": "66fadcd5b426f15e"
+    },
+    {
+      "id": "agent.digital-cleaner",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Digital Cleaner",
+      "description": "Set up a new bot for me I can trigger for a digital cleanout and run monthly.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "google-drive",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/digital-cleaner",
+      "media": [
+        "agents/personal/digital-cleaner/icon.svg"
+      ],
+      "checksum": "378ce178c953f265"
+    },
+    {
+      "id": "agent.email-briefing-assistant",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Email Briefing Assistant",
+      "description": "Set up a new bot for me I can trigger each morning for an email briefing.",
+      "category": "productivity",
+      "tags": [
+        "gmail",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/email-briefing-assistant",
+      "media": [
+        "agents/productivity/email-briefing-assistant/icon.svg"
+      ],
+      "checksum": "e0383bc34b37d955"
+    },
+    {
+      "id": "agent.email-purger",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Email Purger",
+      "description": "Set up a new bot for me I can trigger for an email cleanout, in its own dedicated chat.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/email-purger",
+      "media": [
+        "agents/personal/email-purger/icon.svg"
+      ],
+      "checksum": "a737ccfdeab8ed0f"
+    },
+    {
       "id": "agent.frontend-engineer",
       "type": "agent",
       "version": "1.0.0",
@@ -43,6 +475,506 @@
         "agents/coding/frontend-engineer/icon.svg"
       ],
       "checksum": "a30c506147e0f512"
+    },
+    {
+      "id": "agent.gift-card-and-return-tracker",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Gift Card and Return Tracker",
+      "description": "Set up a new bot for me I can trigger for a purchase-benefits audit, in its own dedicated chat.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/gift-card-and-return-tracker",
+      "media": [
+        "agents/personal/gift-card-and-return-tracker/icon.svg"
+      ],
+      "checksum": "79ea33c639ba6a72"
+    },
+    {
+      "id": "agent.help-center-updater",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Help Center Updater",
+      "description": "Set up a new bot for me that triggers whenever a GitHub pull request is merged, in its own dedicated chat.",
+      "category": "success",
+      "tags": [
+        "intercom",
+        "github",
+        "success"
+      ],
+      "status": "active",
+      "path": "agents/success/help-center-updater",
+      "media": [
+        "agents/success/help-center-updater/icon.svg"
+      ],
+      "checksum": "5acfa1ce9e1c99e3"
+    },
+    {
+      "id": "agent.inbox-zero-assistant",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Inbox Zero Assistant",
+      "description": "Set up a new bot for me I can trigger for inbox zero.",
+      "category": "productivity",
+      "tags": [
+        "gmail",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/inbox-zero-assistant",
+      "media": [
+        "agents/productivity/inbox-zero-assistant/icon.svg"
+      ],
+      "checksum": "fd55e2b54d169260"
+    },
+    {
+      "id": "agent.industry-intel-digest",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Industry Intel Digest",
+      "description": "Set up an always on teammate that keeps me on top of everything moving in my domain on YouTube, so I hear about a launch, a tool or a shift in the conversation before my competitors do.",
+      "category": "marketing",
+      "tags": [
+        "transcriptapi",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/industry-intel-digest",
+      "media": [
+        "agents/marketing/industry-intel-digest/icon.svg"
+      ],
+      "checksum": "e3ea53daee0d320d"
+    },
+    {
+      "id": "agent.kobbe-analytics-briefing",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Kobbe Analytics Briefing",
+      "description": "Set up a new bot for me, in its own dedicated chat, that monitors my website analytics in Kobbe and posts a concise performance briefing.",
+      "category": "marketing",
+      "tags": [
+        "kobbe",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/kobbe-analytics-briefing",
+      "media": [
+        "agents/marketing/kobbe-analytics-briefing/icon.svg"
+      ],
+      "checksum": "1479a1ed5445fb40"
+    },
+    {
+      "id": "agent.linkedin-icp-prospect-tracker",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "LinkedIn ICP Prospect Tracker",
+      "description": "Set up a new bot for me I can trigger to find and track LinkedIn prospects.",
+      "category": "sales",
+      "tags": [
+        "google-search",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/linkedin-icp-prospect-tracker",
+      "media": [
+        "agents/sales/linkedin-icp-prospect-tracker/icon.svg"
+      ],
+      "checksum": "a39ad06d3e57001a"
+    },
+    {
+      "id": "agent.mail-cleanup-assistant",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Mail Cleanup Assistant",
+      "description": "Set up a new bot for me I can trigger for a mail cleanout.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "outlook",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/mail-cleanup-assistant",
+      "media": [
+        "agents/personal/mail-cleanup-assistant/icon.svg"
+      ],
+      "checksum": "02046b543ff1beed"
+    },
+    {
+      "id": "agent.marketing-email-unsubscriber",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Marketing Email Unsubscriber",
+      "description": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/marketing-email-unsubscriber",
+      "media": [
+        "agents/personal/marketing-email-unsubscriber/icon.svg"
+      ],
+      "checksum": "2c577d1425b68cfe"
+    },
+    {
+      "id": "agent.meeting-double",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Meeting Double",
+      "description": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room.",
+      "category": "productivity",
+      "tags": [
+        "google-calendar",
+        "zoom",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/meeting-double",
+      "media": [
+        "agents/productivity/meeting-double/icon.svg"
+      ],
+      "checksum": "6c44ae1f8837bf30"
+    },
+    {
+      "id": "agent.nexus-coordinator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Nexus Coordinator",
+      "description": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat.",
+      "category": "productivity",
+      "tags": [
+        "gmail",
+        "google-calendar",
+        "slack",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/nexus-coordinator",
+      "media": [
+        "agents/productivity/nexus-coordinator/icon.svg"
+      ],
+      "checksum": "977122dd989f0bc3"
+    },
+    {
+      "id": "agent.notion-memory-keeper",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Notion Memory Keeper",
+      "description": "Set up a new bot for me I can trigger to maintain a dedicated Notion page.",
+      "category": "productivity",
+      "tags": [
+        "notion",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/notion-memory-keeper",
+      "media": [
+        "agents/productivity/notion-memory-keeper/icon.svg"
+      ],
+      "checksum": "13fa4da6e7d37193"
+    },
+    {
+      "id": "agent.persistent-bot-memory",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Persistent Bot Memory",
+      "description": "Set up a new bot that persists knowledge from my bots to one GitHub repo.",
+      "category": "productivity",
+      "tags": [
+        "github",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/persistent-bot-memory",
+      "media": [
+        "agents/productivity/persistent-bot-memory/icon.svg"
+      ],
+      "checksum": "4be525d8fe4036ad"
+    },
+    {
+      "id": "agent.personal-cfo",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Personal CFO",
+      "description": "Set up a new bot for me that runs a morning portfolio briefing.",
+      "category": "personal",
+      "tags": [
+        "plaid",
+        "yahoo-finance",
+        "google-calendar",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/personal-cfo",
+      "media": [
+        "agents/personal/personal-cfo/icon.svg"
+      ],
+      "checksum": "e8d8069fe21a4033"
+    },
+    {
+      "id": "agent.prospect-meeting-booker",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Prospect Meeting Booker",
+      "description": "Set up a new bot for me I can trigger when I want to book a meeting with a prospect or customer.",
+      "category": "sales",
+      "tags": [
+        "gmail",
+        "google-calendar",
+        "crm",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/prospect-meeting-booker",
+      "media": [
+        "agents/sales/prospect-meeting-booker/icon.svg"
+      ],
+      "checksum": "9b9323d27e548592"
+    },
+    {
+      "id": "agent.refund-hunter",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Refund Hunter",
+      "description": "Set up a new bot for me I can trigger when I receive a refund, cancellation, or billing email, and run weekly to find money that should have come back.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/refund-hunter",
+      "media": [
+        "agents/personal/refund-hunter/icon.svg"
+      ],
+      "checksum": "7d83728e7e5239d3"
+    },
+    {
+      "id": "agent.social-content-operator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Social Content Operator",
+      "description": "Set up a new bot for me, in its own dedicated chat, that operates my social publishing through Delulu Social.",
+      "category": "marketing",
+      "tags": [
+        "delulu-social",
+        "google-drive",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/social-content-operator",
+      "media": [
+        "agents/marketing/social-content-operator/icon.svg"
+      ],
+      "checksum": "47c602597dedf464"
+    },
+    {
+      "id": "agent.social-media-diet",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Social Media Diet",
+      "description": "Set up a new bot for me so I can stop opening social apps.",
+      "category": "personal",
+      "tags": [
+        "instagram",
+        "linkedin",
+        "x",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/social-media-diet",
+      "media": [
+        "agents/personal/social-media-diet/icon.svg"
+      ],
+      "checksum": "9596edeb9076ca14"
+    },
+    {
+      "id": "agent.social-media-manager",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Social Media Manager",
+      "description": "Set up a new bot for me, in its own dedicated chat, that manages my social media through OmniSocials.",
+      "category": "marketing",
+      "tags": [
+        "omnisocials",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/social-media-manager",
+      "media": [
+        "agents/marketing/social-media-manager/icon.svg"
+      ],
+      "checksum": "c874a68c8719e0d0"
+    },
+    {
+      "id": "agent.sponsorship-negotiator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Sponsorship Negotiator",
+      "description": "Set up a new bot for me I can trigger when a business inquiry or sponsorship request arrives in Gmail.",
+      "category": "sales",
+      "tags": [
+        "gmail",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/sponsorship-negotiator",
+      "media": [
+        "agents/sales/sponsorship-negotiator/icon.svg"
+      ],
+      "checksum": "24def8a90c503a70"
+    },
+    {
+      "id": "agent.subscription-cancellation-advisor",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Subscription Cancellation Advisor",
+      "description": "Set up a new bot for me I can trigger for a subscription audit, in its own dedicated chat.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/subscription-cancellation-advisor",
+      "media": [
+        "agents/personal/subscription-cancellation-advisor/icon.svg"
+      ],
+      "checksum": "f792fa1e4ecb2a80"
+    },
+    {
+      "id": "agent.support-reply-drafter",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Support Reply Drafter",
+      "description": "Set up a new bot for me I can trigger for support auto-replies.",
+      "category": "success",
+      "tags": [
+        "gmail",
+        "success"
+      ],
+      "status": "active",
+      "path": "agents/success/support-reply-drafter",
+      "media": [
+        "agents/success/support-reply-drafter/icon.svg"
+      ],
+      "checksum": "dbe8905ed52ce64b"
+    },
+    {
+      "id": "agent.support-resolution-agent",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Support Resolution Agent",
+      "description": "Set up a new bot for me I can trigger for customer support from my phone or laptop, in its own dedicated chat.",
+      "category": "success",
+      "tags": [
+        "claude",
+        "success"
+      ],
+      "status": "active",
+      "path": "agents/success/support-resolution-agent",
+      "media": [
+        "agents/success/support-resolution-agent/icon.svg"
+      ],
+      "checksum": "8f7248d7db8724cc"
+    },
+    {
+      "id": "agent.video-strategist",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Video Strategist",
+      "description": "Set up a new bot for me called Video Strategist.",
+      "category": "marketing",
+      "tags": [
+        "videngineer",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/video-strategist",
+      "media": [
+        "agents/marketing/video-strategist/icon.svg"
+      ],
+      "checksum": "b34b1b7c054eb526"
+    },
+    {
+      "id": "agent.weekly-social-queue",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Weekly Social Queue",
+      "description": "Set up a new bot for me in its own dedicated chat that fills and runs my social publishing queue for the week.",
+      "category": "marketing",
+      "tags": [
+        "bulkpublish",
+        "notion",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/weekly-social-queue",
+      "media": [
+        "agents/marketing/weekly-social-queue/icon.svg"
+      ],
+      "checksum": "a8cadef4a1257f17"
+    },
+    {
+      "id": "agent.writing-buddy",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Writing Buddy",
+      "description": "Set up a new bot for me I can trigger whenever I need help writing, rewriting, editing, brainstorming, or improving content, in its own dedicated chat.",
+      "category": "productivity",
+      "tags": [
+        "google-docs",
+        "notion",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/writing-buddy",
+      "media": [
+        "agents/productivity/writing-buddy/icon.svg"
+      ],
+      "checksum": "519443084019b3ed"
+    },
+    {
+      "id": "agent.youtube-competitor-tracker",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "YouTube Competitor Tracker",
+      "description": "Set up an always on teammate that tells me what my competitors said out loud this week, before any of it reaches their blog.",
+      "category": "marketing",
+      "tags": [
+        "transcriptapi",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/youtube-competitor-tracker",
+      "media": [
+        "agents/marketing/youtube-competitor-tracker/icon.svg"
+      ],
+      "checksum": "8b7e0aff81b00494"
+    },
+    {
+      "id": "agent.youtube-research-analyst",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "YouTube Research Analyst",
+      "description": "Set up a new bot for me that researches a topic on YouTube.",
+      "category": "productivity",
+      "tags": [
+        "youtube",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/youtube-research-analyst",
+      "media": [
+        "agents/productivity/youtube-research-analyst/icon.svg"
+      ],
+      "checksum": "3b8b41d9b44cb184"
     },
     {
       "id": "team.full-stack-team",

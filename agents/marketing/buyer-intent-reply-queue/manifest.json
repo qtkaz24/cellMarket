@@ -1,0 +1,57 @@
+{
+  "id": "agent.buyer-intent-reply-queue",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Buyer Intent Reply Queue",
+  "description": "Set up a new bot for me.",
+  "longDescription": "Set up a new bot for me. Connect HotMention over MCP at\nhttps://hotmention.com/api/mcp — I'll paste my API key from Settings → API when\nyou ask, and it goes in the Authorization header as a Bearer token. Also connect\nSlack and ask me which channel to post in.\n\nFirst, before scheduling anything, call list_keywords and show me what the\nproject currently tracks. Walk through them with me: for each keyword, tell me\nwhether it reads like something a person would actually type when they're stuck\nor shopping, or like a phrase nobody writes out loud. Matching is literal, so a\nlong keyword like \"project management software for remote teams\" will almost\nnever appear verbatim in a real post — flag those and suggest shorter, natural\nreplacements. Use add_keyword for the ones I approve, and tell me if I hit my\nplan's keyword limit rather than silently dropping any.\n\nThen run every weekday at 9am my time:\n\nCall search_mentions with score_min 70 and since set to the last 24 hours. Those\nare the ones where someone is actively describing a problem I solve, not just\nmentioning a topic. For each result, post one Slack message containing:\n\n- the score, the platform, and how long ago it was posted\n- the post title, and two lines of what the person actually asked for\n- the draft reply HotMention generated, in a code block so I can copy it cleanly\n- a direct link to the original post\n\nSort them highest score first, and if there are more than ten, post the top ten\nand say how many you held back.\n\nDo not post anything to any platform yourself. I reply from my own account —\nthese are real conversations and they should come from a person. Your job ends\nat putting a good draft in front of me.\n\nTwo things I want you to be honest about rather than papering over. If\nsearch_mentions returns nothing at all for several days running, say so plainly\nand suggest we look at the keywords again, because silence usually means the\nkeywords are wrong rather than that nobody is talking. And once a week, call\nget_usage and tell me how much of my lead quota I've used and how many days are\nleft in the period, so a busy week doesn't quietly cut off scanning halfway\nthrough.\n\nSave this as a bot when I confirm the Slack channel.",
+  "category": "marketing",
+  "tags": [
+    "hotmention",
+    "slack",
+    "marketing"
+  ],
+  "author": {
+    "name": "alexandr-belogubov",
+    "url": "https://github.com/alexandr-belogubov"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Buyer Intent Reply Queue icon"
+    }
+  },
+  "agent": {
+    "role": "Buyer Intent Reply Queue",
+    "instructions": "Set up a new bot for me. Connect HotMention over MCP at\nhttps://hotmention.com/api/mcp — I'll paste my API key from Settings → API when\nyou ask, and it goes in the Authorization header as a Bearer token. Also connect\nSlack and ask me which channel to post in.\n\nFirst, before scheduling anything, call list_keywords and show me what the\nproject currently tracks. Walk through them with me: for each keyword, tell me\nwhether it reads like something a person would actually type when they're stuck\nor shopping, or like a phrase nobody writes out loud. Matching is literal, so a\nlong keyword like \"project management software for remote teams\" will almost\nnever appear verbatim in a real post — flag those and suggest shorter, natural\nreplacements. Use add_keyword for the ones I approve, and tell me if I hit my\nplan's keyword limit rather than silently dropping any.\n\nThen run every weekday at 9am my time:\n\nCall search_mentions with score_min 70 and since set to the last 24 hours. Those\nare the ones where someone is actively describing a problem I solve, not just\nmentioning a topic. For each result, post one Slack message containing:\n\n- the score, the platform, and how long ago it was posted\n- the post title, and two lines of what the person actually asked for\n- the draft reply HotMention generated, in a code block so I can copy it cleanly\n- a direct link to the original post\n\nSort them highest score first, and if there are more than ten, post the top ten\nand say how many you held back.\n\nDo not post anything to any platform yourself. I reply from my own account —\nthese are real conversations and they should come from a person. Your job ends\nat putting a good draft in front of me.\n\nTwo things I want you to be honest about rather than papering over. If\nsearch_mentions returns nothing at all for several days running, say so plainly\nand suggest we look at the keywords again, because silence usually means the\nkeywords are wrong rather than that nobody is talking. And once a week, call\nget_usage and tell me how much of my lead quota I've used and how many days are\nleft in the period, so a busy week doesn't quietly cut off scanning halfway\nthrough.\n\nSave this as a bot when I confirm the Slack channel.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "hotmention",
+        "description": "Integration with HotMention",
+        "required": false
+      },
+      {
+        "name": "slack",
+        "description": "Integration with Slack",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "fs.read",
+      "fs.write"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "HotMention"
+    },
+    {
+      "name": "Slack"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "agent.deal-desk-autopilot",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Deal Desk Autopilot",
+  "description": "Set up a new bot for me I can trigger for deal momentum.",
+  "longDescription": "Set up a new bot for me I can trigger for deal momentum. Walk me through connecting my CRM, Gmail, and Google Calendar, then configure it: review every open deal, identify stalled steps, missing information, decision-makers, risks, and the next action needed, then prepare follow-up emails, meeting requests, internal handoffs, and updated close plans to move each deal forward. Ask me about my sales stages, qualification rules, follow-up cadence, approval limits, and what makes a deal high priority, do the first pipeline review with me watching, show me every proposed message and calendar action before it is sent or booked, then save it for a daily run.",
+  "category": "sales",
+  "tags": [
+    "gmail",
+    "google-calendar",
+    "sales"
+  ],
+  "author": {
+    "name": "ericosiu",
+    "url": "https://x.com/ericosiu"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Deal Desk Autopilot icon"
+    }
+  },
+  "agent": {
+    "role": "Deal Desk Autopilot",
+    "instructions": "Set up a new bot for me I can trigger for deal momentum. Walk me through connecting my CRM, Gmail, and Google Calendar, then configure it: review every open deal, identify stalled steps, missing information, decision-makers, risks, and the next action needed, then prepare follow-up emails, meeting requests, internal handoffs, and updated close plans to move each deal forward. Ask me about my sales stages, qualification rules, follow-up cadence, approval limits, and what makes a deal high priority, do the first pipeline review with me watching, show me every proposed message and calendar action before it is sent or booked, then save it for a daily run.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      },
+      {
+        "name": "google-calendar",
+        "description": "Integration with Google Calendar",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com"
+    },
+    {
+      "name": "Google Calendar",
+      "url": "https://calendar.google.com"
+    }
+  ]
+}

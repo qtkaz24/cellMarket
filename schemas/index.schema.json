@@ -49,7 +49,7 @@
           },
           "category": {
             "type": "string",
-            "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"],
+            "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development", "marketing", "personal", "sales", "success"],
             "description": "Human category."
           },
           "tags": {

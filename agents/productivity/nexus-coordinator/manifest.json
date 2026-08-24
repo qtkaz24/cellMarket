@@ -1,0 +1,69 @@
+{
+  "id": "agent.nexus-coordinator",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Nexus Coordinator",
+  "description": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat.",
+  "longDescription": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat. Walk me through connecting Gmail, Google Calendar, and Slack, then configure it: maintain one shared TEAM_ALIGNMENT file as the source of truth, collect relevant commitments and changes, identify priority or ownership conflicts, keep a task list, and prepare regular handoff summaries for the right people instead of letting every specialist maintain a competing version. Ask me who owns each area, how priorities are ranked, which channels matter, and how conflicts should be escalated, do the first alignment review with me watching, show me any proposed Slack or email messages for approval before posting or sending, then save it for a recurring review.",
+  "category": "productivity",
+  "tags": [
+    "gmail",
+    "google-calendar",
+    "slack",
+    "productivity"
+  ],
+  "author": {
+    "name": "Voxyz_ai",
+    "url": "https://x.com/Voxyz_ai"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Nexus Coordinator icon"
+    }
+  },
+  "agent": {
+    "role": "Nexus Coordinator",
+    "instructions": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat. Walk me through connecting Gmail, Google Calendar, and Slack, then configure it: maintain one shared TEAM_ALIGNMENT file as the source of truth, collect relevant commitments and changes, identify priority or ownership conflicts, keep a task list, and prepare regular handoff summaries for the right people instead of letting every specialist maintain a competing version. Ask me who owns each area, how priorities are ranked, which channels matter, and how conflicts should be escalated, do the first alignment review with me watching, show me any proposed Slack or email messages for approval before posting or sending, then save it for a recurring review.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      },
+      {
+        "name": "google-calendar",
+        "description": "Integration with Google Calendar",
+        "required": false
+      },
+      {
+        "name": "slack",
+        "description": "Integration with Slack",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.read"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com/"
+    },
+    {
+      "name": "Google Calendar",
+      "url": "https://calendar.google.com/"
+    },
+    {
+      "name": "Slack",
+      "url": "https://slack.com/"
+    }
+  ]
+}
