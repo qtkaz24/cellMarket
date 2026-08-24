@@ -1,0 +1,43 @@
+{
+  "id": "workflow.example-workflow",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Workflow Template",
+  "description": "A template showing how to define a multi-step automated workflow.",
+  "category": "development",
+  "tags": ["example", "template", "workflow"],
+  "status": "active",
+  "workflow": {
+    "description": "A simple workflow that demonstrates triggers, actions, and agent references.",
+    "triggers": [
+      {
+        "type": "manual",
+        "description": "Triggered manually by the user"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.example-minimal",
+        "version": "^1.0.0",
+        "role": "Primary agent"
+      }
+    ],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "analyze",
+        "description": "Analyze the input",
+        "agentId": "agent.example-minimal",
+        "input": { "source": "trigger.input" },
+        "output": { "analysis": "result" },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "description": "Send results",
+        "input": { "message": "analyze.analysis" }
+      }
+    ]
+  }
+}

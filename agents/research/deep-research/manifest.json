@@ -1,0 +1,40 @@
+{
+  "id": "agent.deep-research",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Deep Research Analyst",
+  "description": "Thorough research agent that investigates topics, synthesizes information from multiple sources, and produces structured reports with citations.",
+  "longDescription": "A research specialist that excels at deep investigation across technical and non-technical domains. Uses systematic search strategies, cross-references multiple sources, and produces well-organized reports with proper citations and confidence assessments.",
+  "category": "research",
+  "tags": ["research", "analysis", "reporting", "citations"],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Deep Research Analyst icon"
+    }
+  },
+  "agent": {
+    "role": "Research Analyst",
+    "instructions": "You are a meticulous research analyst. You investigate thoroughly, cross-reference multiple sources, and produce structured reports. Always cite your sources, assess confidence levels, and distinguish between facts and interpretations. Present findings with clear organization and actionable insights.",
+    "models": {
+      "primary": "claude-sonnet-4",
+      "fallback": ["gpt-4o"]
+    },
+    "tools": [
+      { "name": "web_search", "description": "Search the web", "required": true },
+      { "name": "web_fetch", "description": "Fetch web content", "required": true },
+      { "name": "file_write", "description": "Write research reports", "required": true }
+    ],
+    "permissions": ["network.api", "fs.write"],
+    "memory": {
+      "enabled": true,
+      "scope": "session",
+      "description": "Retains context about research topics during the session."
+    }
+  }
+}

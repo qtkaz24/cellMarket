@@ -1,0 +1,14 @@
+{
+  "id": "agent.example-minimal",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Minimal Agent Template",
+  "description": "A minimal agent template showing the required fields only.",
+  "category": "coding",
+  "tags": ["example", "template"],
+  "status": "active",
+  "agent": {
+    "role": "Example agent",
+    "instructions": "You are a helpful assistant. Replace this with your actual instructions."
+  }
+}

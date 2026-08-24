@@ -1,0 +1,298 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agent-marketplace.dev/schemas/workflow.schema.json",
+  "title": "Workflow Manifest",
+  "description": "Schema for workflow manifests in the Agent Marketplace.",
+  "type": "object",
+  "required": ["id", "type", "version", "name", "description", "category", "status", "workflow"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^workflow\\.[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable unique identifier. Must start with 'workflow.' prefix."
+    },
+    "type": {
+      "type": "string",
+      "const": "workflow"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version (MAJOR.MINOR.PATCH)."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "longDescription": {
+      "type": "string",
+      "maxLength": 10000
+    },
+    "category": {
+      "type": "string",
+      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "maxLength": 50
+      },
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "maxLength": 100 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "license": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "hidden", "deprecated", "revoked"]
+    },
+    "media": { "$ref": "#/$defs/media" },
+    "workflow": {
+      "type": "object",
+      "required": ["description", "triggers", "actions"],
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "What this workflow does."
+        },
+        "triggers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/trigger" },
+          "minItems": 1,
+          "maxItems": 10,
+          "description": "Events or conditions that start this workflow."
+        },
+        "actions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/action" },
+          "minItems": 1,
+          "maxItems": 50,
+          "description": "Ordered steps in this workflow."
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["agentId"],
+            "properties": {
+              "agentId": {
+                "type": "string",
+                "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
+                "description": "Agent template ID used in this workflow."
+              },
+              "version": {
+                "type": "string",
+                "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$|^\\^[0-9]+\\.[0-9]+\\.[0-9]+$|^~[0-9]+\\.[0-9]+\\.[0-9]+$|^>=?[0-9]+\\.[0-9]+\\.[0-9]+$"
+              },
+              "role": {
+                "type": "string",
+                "maxLength": 200
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9.]*$"
+                },
+                "uniqueItems": true
+              }
+            }
+          },
+          "maxItems": 20,
+          "description": "Agents required by this workflow."
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string", "maxLength": 500 },
+              "required": { "type": "boolean", "default": false }
+            }
+          },
+          "maxItems": 50,
+          "description": "Tools required across the workflow."
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9.]*$"
+          },
+          "maxItems": 30,
+          "uniqueItems": true,
+          "description": "Aggregate permissions requested by this workflow."
+        },
+        "config": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Workflow-level configuration."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "trigger": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["manual", "schedule", "event", "webhook", "file-change"],
+          "description": "Trigger type."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "config": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Trigger-specific configuration."
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["type", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["agent", "tool", "transform", "condition", "parallel", "notify"],
+          "description": "Action type."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Action name (unique within workflow)."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "agentId": {
+          "type": "string",
+          "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Agent to use (for agent-type actions)."
+        },
+        "tool": {
+          "type": "string",
+          "description": "Tool to invoke (for tool-type actions)."
+        },
+        "condition": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Condition expression (for condition-type actions)."
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Input mapping for this action."
+        },
+        "output": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Output mapping for this action."
+        },
+        "next": {
+          "type": "string",
+          "description": "Name of the next action (for sequential flows)."
+        },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/action" },
+          "maxItems": 20,
+          "description": "Child actions (for parallel-type actions)."
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "icon": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src"],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^(icon\\.svg|media/icon\\.(svg|png|webp))$"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        "hero": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "alt"],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^media/[a-z0-9-]+\\.(webp|avif|png|jpg)$"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["src", "alt", "order"],
+            "properties": {
+              "src": {
+                "type": "string",
+                "pattern": "^media/[a-z0-9-]+\\.(webp|avif|png|jpg)$"
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "maxItems": 20
+        }
+      }
+    }
+  }
+}

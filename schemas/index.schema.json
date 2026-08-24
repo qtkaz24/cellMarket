@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agent-marketplace.dev/schemas/index.schema.json",
+  "title": "Marketplace Index",
+  "description": "Generated index of all valid marketplace entries.",
+  "type": "object",
+  "required": ["generatedAt", "totalEntries", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of index generation."
+    },
+    "totalEntries": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of entries in the index."
+    },
+    "entries": {
+      "type": "array",
+      "description": "All marketplace entries, sorted deterministically (type → id → version).",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "version", "name", "description", "category", "status", "path", "checksum"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable unique identifier."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["agent", "team", "workflow"],
+            "description": "Entity type."
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+            "description": "Semantic version."
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name."
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description."
+          },
+          "category": {
+            "type": "string",
+            "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"],
+            "description": "Human category."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Searchable tags."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["active", "hidden", "deprecated", "revoked"],
+            "description": "Lifecycle status."
+          },
+          "path": {
+            "type": "string",
+            "description": "Relative path to the entry directory."
+          },
+          "media": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Relative paths to media files."
+          },
+          "checksum": {
+            "type": ["string", "null"],
+            "description": "SHA-256 prefix (16 chars) of the manifest.json file."
+          }
+        }
+      }
+    }
+  }
+}

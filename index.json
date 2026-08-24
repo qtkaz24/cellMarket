@@ -1,0 +1,83 @@
+{
+  "$schema": "schemas/index.schema.json",
+  "generatedAt": "2026-08-24T14:43:14.829Z",
+  "totalEntries": 4,
+  "entries": [
+    {
+      "id": "agent.deep-research",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Deep Research Analyst",
+      "description": "Thorough research agent that investigates topics, synthesizes information from multiple sources, and produces structured reports with citations.",
+      "category": "research",
+      "tags": [
+        "research",
+        "analysis",
+        "reporting",
+        "citations"
+      ],
+      "status": "active",
+      "path": "agents/research/deep-research",
+      "media": [
+        "agents/research/deep-research/icon.svg"
+      ],
+      "checksum": "c32480834e86b3ad"
+    },
+    {
+      "id": "agent.frontend-engineer",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Frontend Engineer",
+      "description": "Full-stack frontend specialist with deep expertise in React, Next.js, TypeScript, and modern CSS. Builds production-ready UI components and pages.",
+      "category": "coding",
+      "tags": [
+        "frontend",
+        "react",
+        "typescript",
+        "css",
+        "ui"
+      ],
+      "status": "active",
+      "path": "agents/coding/frontend-engineer",
+      "media": [
+        "agents/coding/frontend-engineer/icon.svg"
+      ],
+      "checksum": "a30c506147e0f512"
+    },
+    {
+      "id": "team.full-stack-team",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Full Stack Team",
+      "description": "A collaborative team combining frontend and research expertise for end-to-end project delivery.",
+      "category": "coding",
+      "tags": [
+        "team",
+        "fullstack",
+        "collaborative"
+      ],
+      "status": "active",
+      "path": "teams/coding/full-stack-team",
+      "media": [],
+      "checksum": "37c8a85003648c57"
+    },
+    {
+      "id": "workflow.code-review-pipeline",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Code Review Pipeline",
+      "description": "Automated code review workflow that analyzes changes, checks quality, and produces a structured review report.",
+      "category": "development",
+      "tags": [
+        "code-review",
+        "ci",
+        "quality",
+        "pipeline"
+      ],
+      "status": "active",
+      "path": "workflows/development/code-review-pipeline",
+      "media": [],
+      "checksum": "663b4d78525af5d6"
+    }
+  ]
+}

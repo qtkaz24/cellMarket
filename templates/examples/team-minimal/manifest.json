@@ -1,0 +1,32 @@
+{
+  "id": "team.example-team",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Team Template",
+  "description": "A template showing how to define a team of agents working together.",
+  "category": "coding",
+  "tags": ["example", "template", "team"],
+  "status": "active",
+  "team": {
+    "description": "A collaborative team of agents that work together on coding tasks.",
+    "members": [
+      {
+        "agentId": "agent.example-minimal",
+        "version": "^1.0.0",
+        "role": "Lead engineer",
+        "delegates": ["agent.example-minimal"],
+        "permissions": ["fs.read", "fs.write"]
+      }
+    ],
+    "orchestration": {
+      "strategy": "collaborative",
+      "maxConcurrent": 3,
+      "timeout": 600
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Share code context and task progress."
+    }
+  }
+}

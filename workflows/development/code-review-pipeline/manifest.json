@@ -1,0 +1,69 @@
+{
+  "id": "workflow.code-review-pipeline",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Code Review Pipeline",
+  "description": "Automated code review workflow that analyzes changes, checks quality, and produces a structured review report.",
+  "category": "development",
+  "tags": ["code-review", "ci", "quality", "pipeline"],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "workflow": {
+    "description": "Receives code changes, analyzes them with the frontend engineer agent, and produces a structured review report.",
+    "triggers": [
+      {
+        "type": "manual",
+        "description": "Triggered manually with a set of file changes"
+      },
+      {
+        "type": "event",
+        "description": "Triggered by a pull request event",
+        "config": {
+          "event": "pull_request.opened"
+        }
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.frontend-engineer",
+        "version": "^1.0.0",
+        "role": "Code reviewer",
+        "permissions": ["fs.read"]
+      }
+    ],
+    "tools": [
+      { "name": "git_diff", "description": "Get file changes", "required": true },
+      { "name": "file_read", "description": "Read source files", "required": true }
+    ],
+    "permissions": ["fs.read"],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "collect-changes",
+        "description": "Collect the set of changed files",
+        "tool": "git_diff",
+        "input": { "ref": "trigger.ref" },
+        "output": { "changes": "files" },
+        "next": "review"
+      },
+      {
+        "type": "agent",
+        "name": "review",
+        "description": "Analyze code quality and patterns",
+        "agentId": "agent.frontend-engineer",
+        "input": { "files": "collect-changes.changes" },
+        "output": { "review": "report" },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "description": "Output the review report",
+        "input": { "message": "review.report" }
+      }
+    ]
+  }
+}

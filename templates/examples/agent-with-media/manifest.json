@@ -1,0 +1,50 @@
+{
+  "id": "agent.example-with-media",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Agent with Media Template",
+  "description": "A template showing how to include hero images and showcase galleries.",
+  "category": "coding",
+  "tags": ["example", "template", "multi-image"],
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Agent with Media icon"
+    },
+    "hero": {
+      "src": "media/hero.webp",
+      "alt": "Agent overview screenshot"
+    },
+    "images": [
+      {
+        "src": "media/conversations.webp",
+        "alt": "Conversations interface",
+        "order": 0
+      },
+      {
+        "src": "media/memory.webp",
+        "alt": "Memory management interface",
+        "order": 1
+      }
+    ]
+  },
+  "agent": {
+    "role": "Example agent with media",
+    "instructions": "You are a helpful assistant with a rich visual interface.",
+    "models": {
+      "primary": "claude-sonnet-4",
+      "fallback": ["gpt-4o"]
+    },
+    "tools": [
+      { "name": "web_search", "description": "Search the web", "required": false },
+      { "name": "file_read", "description": "Read files", "required": true }
+    ],
+    "permissions": ["fs.read", "network.api"],
+    "memory": {
+      "enabled": true,
+      "scope": "session",
+      "description": "Remembers conversation context within a session."
+    }
+  }
+}

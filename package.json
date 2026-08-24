@@ -1,0 +1,16 @@
+{
+  "name": "agent-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official Agent Marketplace catalog repository",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "build:index": "node scripts/build-index.js",
+    "ci": "npm run validate && npm run build:index && node scripts/verify-index.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

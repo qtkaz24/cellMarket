@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agent-marketplace.dev/schemas/team.schema.json",
+  "title": "Team Manifest",
+  "description": "Schema for team manifests in the Agent Marketplace.",
+  "type": "object",
+  "required": ["id", "type", "version", "name", "description", "category", "status", "team"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^team\\.[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable unique identifier. Must start with 'team.' prefix."
+    },
+    "type": {
+      "type": "string",
+      "const": "team"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version (MAJOR.MINOR.PATCH)."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "longDescription": {
+      "type": "string",
+      "maxLength": 10000
+    },
+    "category": {
+      "type": "string",
+      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "maxLength": 50
+      },
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "maxLength": 100 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "license": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["active", "hidden", "deprecated", "revoked"]
+    },
+    "media": { "$ref": "#/$defs/media" },
+    "team": {
+      "type": "object",
+      "required": ["members", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "How the team works together."
+        },
+        "members": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/teamMember" },
+          "minItems": 1,
+          "maxItems": 20,
+          "description": "Team member references."
+        },
+        "orchestration": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "enum": ["sequential", "parallel", "hierarchical", "collaborative"],
+              "default": "collaborative",
+              "description": "How team members coordinate."
+            },
+            "maxConcurrent": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 5,
+              "description": "Maximum concurrent agent executions."
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3600,
+              "description": "Task timeout in seconds."
+            }
+          },
+          "description": "Team orchestration settings."
+        },
+        "sharedContext": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "scope": {
+              "type": "string",
+              "enum": ["session", "task", "persistent"],
+              "default": "task"
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "description": "Shared context between team members."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "teamMember": {
+      "type": "object",
+      "required": ["agentId", "role"],
+      "additionalProperties": false,
+      "properties": {
+        "agentId": {
+          "type": "string",
+          "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Stable agent template ID."
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$|^\\^[0-9]+\\.[0-9]+\\.[0-9]+$|^~[0-9]+\\.[0-9]+\\.[0-9]+$|^>=?[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Version or range (exact, caret, tilde, or comparison)."
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "This member's role within the team."
+        },
+        "config": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Agent-specific overrides for this team context."
+        },
+        "delegates": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "description": "Other agents this member can delegate to."
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9.]*$"
+          },
+          "uniqueItems": true,
+          "description": "Additional permissions requested for this member."
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "icon": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src"],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^(icon\\.svg|media/icon\\.(svg|png|webp))$"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        "hero": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "alt"],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^media/[a-z0-9-]+\\.(webp|avif|png|jpg)$"
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["src", "alt", "order"],
+            "properties": {
+              "src": {
+                "type": "string",
+                "pattern": "^media/[a-z0-9-]+\\.(webp|avif|png|jpg)$"
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "maxItems": 20
+        }
+      }
+    }
+  }
+}

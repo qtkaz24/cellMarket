@@ -1,0 +1,42 @@
+{
+  "id": "team.full-stack-team",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Full Stack Team",
+  "description": "A collaborative team combining frontend and research expertise for end-to-end project delivery.",
+  "category": "coding",
+  "tags": ["team", "fullstack", "collaborative"],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "team": {
+    "description": "Frontend engineer and research analyst collaborate to build informed, well-researched features.",
+    "members": [
+      {
+        "agentId": "agent.frontend-engineer",
+        "version": "^1.0.0",
+        "role": "Lead developer — builds UI and components",
+        "delegates": ["agent.deep-research"],
+        "permissions": ["fs.read", "fs.write", "terminal.run"]
+      },
+      {
+        "agentId": "agent.deep-research",
+        "version": "^1.0.0",
+        "role": "Research specialist — investigates requirements and technologies",
+        "permissions": ["network.api", "fs.write"]
+      }
+    ],
+    "orchestration": {
+      "strategy": "collaborative",
+      "maxConcurrent": 2,
+      "timeout": 1200
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Shared project context and research findings."
+    }
+  }
+}
