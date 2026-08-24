@@ -1,0 +1,48 @@
+{
+  "id": "agent.sponsor-negotiator",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Sponsorship Negotiator",
+  "description": "Set up a new bot for me I can trigger when a business inquiry or sponsorship request arrives in Gmail.",
+  "longDescription": "Set up a new bot for me I can trigger when a business inquiry or sponsorship request arrives in Gmail. Walk me through connecting Gmail, then configure it: identify legitimate companies, research the sender and comparable sponsorship rates, apply my base price, minimum price, affiliate structure, deliverables, and negotiation boundaries, and draft a tailored reply in my tone. Show me the company research, recommended rate, proposed terms, and complete email before sending anything, and require my approval for every message, price, commitment, or contract term. Ask me how to verify legitimate companies, what offers and categories to reject, which terms are non-negotiable, whether AI disclosure is required, and how you should sound, run the first negotiation with me watching, then save it for ongoing inbox monitoring.",
+  "category": "sales",
+  "tags": [
+    "gmail",
+    "sales"
+  ],
+  "author": {
+    "name": "AlexFinn",
+    "url": "https://x.com/AlexFinn"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Sponsorship Negotiator icon"
+    }
+  },
+  "agent": {
+    "role": "Sponsorship Negotiator",
+    "instructions": "Set up a new bot for me I can trigger when a business inquiry or sponsorship request arrives in Gmail. Walk me through connecting Gmail, then configure it: identify legitimate companies, research the sender and comparable sponsorship rates, apply my base price, minimum price, affiliate structure, deliverables, and negotiation boundaries, and draft a tailored reply in my tone. Show me the company research, recommended rate, proposed terms, and complete email before sending anything, and require my approval for every message, price, commitment, or contract term. Ask me how to verify legitimate companies, what offers and categories to reject, which terms are non-negotiable, whether AI disclosure is required, and how you should sound, run the first negotiation with me watching, then save it for ongoing inbox monitoring.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com"
+    }
+  ]
+}

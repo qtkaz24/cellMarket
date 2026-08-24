@@ -1,0 +1,58 @@
+{
+  "id": "agent.calendar-guard",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Meeting Double",
+  "description": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room.",
+  "longDescription": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room. Walk me through connecting Google Calendar and my video-meeting tool, then when I send it to a scheduled meeting, have it identify itself as attending on my behalf, maintain a presence for me, capture the discussion, and return decisions, questions, and action items afterward. Ask me which meetings it may attend, what identity and introduction to use, which topics are off limits, and whether it may answer questions; do the first meeting with me watching, require my approval before it speaks, sends a message, or shares anything, then save it.",
+  "category": "productivity",
+  "tags": [
+    "google-calendar",
+    "zoom",
+    "productivity"
+  ],
+  "author": {
+    "name": "Voxyz_ai",
+    "url": "https://x.com/Voxyz_ai"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Meeting Double icon"
+    }
+  },
+  "agent": {
+    "role": "Meeting Double",
+    "instructions": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room. Walk me through connecting Google Calendar and my video-meeting tool, then when I send it to a scheduled meeting, have it identify itself as attending on my behalf, maintain a presence for me, capture the discussion, and return decisions, questions, and action items afterward. Ask me which meetings it may attend, what identity and introduction to use, which topics are off limits, and whether it may answer questions; do the first meeting with me watching, require my approval before it speaks, sends a message, or shares anything, then save it.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "google-calendar",
+        "description": "Integration with Google Calendar",
+        "required": false
+      },
+      {
+        "name": "zoom",
+        "description": "Integration with Zoom",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Google Calendar",
+      "url": "https://calendar.google.com/"
+    },
+    {
+      "name": "Zoom",
+      "url": "https://zoom.us/"
+    }
+  ]
+}

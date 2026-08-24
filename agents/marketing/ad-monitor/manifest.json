@@ -1,0 +1,56 @@
+{
+  "id": "agent.ad-monitor",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Ad Pacing Digest",
+  "description": "Set up a new bot for me that runs daily at 8:00am.",
+  "longDescription": "Set up a new bot for me that runs daily at 8:00am. Walk me through connecting Apple Search Ads and Slack, then configure it: post spend against plan, what's over-delivering and what to cut, and when I reply in the thread make the bid edit and confirm what changed. Ask me for the daily plan and guardrails, require confirmation above my threshold, then save it.",
+  "category": "marketing",
+  "tags": [
+    "apple-search-ads",
+    "slack",
+    "marketing"
+  ],
+  "author": {
+    "name": "ericzakariasson",
+    "url": "https://x.com/ericzakariasson"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Ad Pacing Digest icon"
+    }
+  },
+  "agent": {
+    "role": "Ad Pacing Digest",
+    "instructions": "Set up a new bot for me that runs daily at 8:00am. Walk me through connecting Apple Search Ads and Slack, then configure it: post spend against plan, what's over-delivering and what to cut, and when I reply in the thread make the bid edit and confirm what changed. Ask me for the daily plan and guardrails, require confirmation above my threshold, then save it.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "apple-search-ads",
+        "description": "Integration with Apple Search Ads",
+        "required": false
+      },
+      {
+        "name": "slack",
+        "description": "Integration with Slack",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "fs.read"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Apple Search Ads"
+    },
+    {
+      "name": "Slack"
+    }
+  ]
+}

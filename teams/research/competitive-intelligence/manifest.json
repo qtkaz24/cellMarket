@@ -26,35 +26,35 @@
     "description": "Monitors the competitive landscape: ad strategies, pricing changes, YouTube presence, and industry trends. Produces actionable intelligence reports.",
     "members": [
       {
-        "agentId": "agent.competitor-ad-watch",
+        "agentId": "agent.competitor-ads",
         "role": "Ad intelligence — tracks competitor ad creatives, spend, and messaging",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.competitor-pricing-watch",
+        "agentId": "agent.competitor-pricing",
         "role": "Pricing intelligence — monitors competitor pricing changes and positioning",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.youtube-competitor-tracker",
+        "agentId": "agent.youtube-monitor",
         "role": "Video intelligence — analyzes competitor YouTube strategy and performance",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.industry-intel-digest",
+        "agentId": "agent.industry-intel",
         "role": "Industry trends — aggregates news, reports, and market signals",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.deep-research",
+        "agentId": "agent.research-analyst",
         "role": "Deep analysis — produces structured reports with citations and confidence assessments",
         "permissions": [
           "network.api",

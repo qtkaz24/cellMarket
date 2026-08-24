@@ -36,28 +36,28 @@
         ]
       },
       {
-        "agentId": "agent.mail-cleanup-assistant",
+        "agentId": "agent.mail-cleaner",
         "role": "Mail optimization — categorizes, archives, and sets up filters",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.email-purger",
+        "agentId": "agent.email-purge",
         "role": "Bulk purge — identifies and removes years of accumulated email clutter",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.marketing-email-unsubscriber",
+        "agentId": "agent.unsubscriber",
         "role": "Unsubscribe automation — identifies and unsubscribes from marketing lists",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.subscription-cancellation-advisor",
+        "agentId": "agent.subscription-auditor",
         "role": "Subscription audit — identifies unused subscriptions and guides cancellation",
         "permissions": [
           "network.api"
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "agentId": "agent.gift-card-and-return-tracker",
+        "agentId": "agent.gift-card-tracker",
         "role": "Gift card & returns — tracks balances, return windows, and pending refunds",
         "permissions": [
           "network.api"

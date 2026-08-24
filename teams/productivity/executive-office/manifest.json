@@ -27,21 +27,21 @@
     "description": "Personal AI chief of staff: morning briefings, calendar optimization, inbox management, and financial oversight. Runs your daily operating rhythm.",
     "members": [
       {
-        "agentId": "agent.daily-briefing",
+        "agentId": "agent.morning-brief",
         "role": "Morning briefing — synthesizes calendar, priorities, and overnight developments",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.daily-focus-adviser",
+        "agentId": "agent.daily-focus",
         "role": "Focus optimization — identifies the 3 most important tasks for the day",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.inbox-zero-assistant",
+        "agentId": "agent.inbox-zero",
         "role": "Email management — triages, drafts replies, and cleans inbox",
         "permissions": [
           "network.api",
@@ -49,21 +49,21 @@
         ]
       },
       {
-        "agentId": "agent.email-briefing-assistant",
+        "agentId": "agent.email-digest",
         "role": "Email digest — summarizes important emails and action items",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.meeting-double",
+        "agentId": "agent.calendar-guard",
         "role": "Calendar optimization — prevents double-bookings, optimizes meeting blocks",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.personal-cfo",
+        "agentId": "agent.finance-assistant",
         "role": "Financial oversight — morning portfolio briefing, rebalancing alerts, market events",
         "permissions": [
           "network.api"

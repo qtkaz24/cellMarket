@@ -1,0 +1,48 @@
+{
+  "id": "agent.subscription-auditor",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Subscription Cancellation Advisor",
+  "description": "Set up a new bot for me I can trigger for a subscription audit, in its own dedicated chat.",
+  "longDescription": "Set up a new bot for me I can trigger for a subscription audit, in its own dedicated chat. Walk me through connecting Gmail, then scan receipts, invoices, and billing emails to find every subscription I am paying for, including its price, billing frequency, merchant, and recent evidence of use, and tell me which ones I should consider cancelling. Ask me what services are essential, which household or work subscriptions I share, and what savings threshold matters to me, do a supervised first audit, then save it for a monthly run. Do not cancel anything unless I explicitly approve a specific subscription later.",
+  "category": "personal",
+  "tags": [
+    "gmail",
+    "personal"
+  ],
+  "author": {
+    "name": "toddsaunders",
+    "url": "https://x.com/toddsaunders"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Subscription Cancellation Advisor icon"
+    }
+  },
+  "agent": {
+    "role": "Subscription Cancellation Advisor",
+    "instructions": "Set up a new bot for me I can trigger for a subscription audit, in its own dedicated chat. Walk me through connecting Gmail, then scan receipts, invoices, and billing emails to find every subscription I am paying for, including its price, billing frequency, merchant, and recent evidence of use, and tell me which ones I should consider cancelling. Ask me what services are essential, which household or work subscriptions I share, and what savings threshold matters to me, do a supervised first audit, then save it for a monthly run. Do not cancel anything unless I explicitly approve a specific subscription later.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "gmail",
+        "description": "Integration with Gmail",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Gmail",
+      "url": "https://mail.google.com/"
+    }
+  ]
+}

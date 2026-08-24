@@ -26,14 +26,14 @@
     "description": "Full content lifecycle: ideation → creation → scheduling → publishing → performance analysis. Produces a consistent content calendar across all platforms.",
     "members": [
       {
-        "agentId": "agent.content-idea-generator",
+        "agentId": "agent.content-strategist",
         "role": "Ideation engine — generates and ranks content ideas by potential impact",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.writing-buddy",
+        "agentId": "agent.writing-assistant",
         "role": "Content creation — drafts articles, posts, and scripts from briefs",
         "permissions": [
           "fs.read",
@@ -49,21 +49,21 @@
         ]
       },
       {
-        "agentId": "agent.carousel-publisher",
+        "agentId": "agent.carousel-creator",
         "role": "Visual content — creates and publishes carousel posts for LinkedIn/Instagram",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.weekly-social-queue",
+        "agentId": "agent.social-scheduler",
         "role": "Scheduling — queues content across platforms for optimal posting times",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.kobbe-analytics-briefing",
+        "agentId": "agent.analytics-brief",
         "role": "Performance analytics — reports on content metrics and recommends optimizations",
         "permissions": [
           "network.api"

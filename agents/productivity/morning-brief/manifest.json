@@ -1,0 +1,56 @@
+{
+  "id": "agent.morning-brief",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Daily Briefing",
+  "description": "Set up a new bot for me.",
+  "longDescription": "Set up a new bot for me. Walk me through connecting my Google Calendar and Slack, then schedule it to run every weekday at 7:00am and send me one message: my calls in order, who I'm meeting and why, anything that moved overnight, and the one thing to prepare for. Ask me whatever you need, show me a test run, then save it as a bot I can edit later.",
+  "category": "productivity",
+  "tags": [
+    "google-calendar",
+    "slack",
+    "productivity"
+  ],
+  "author": {
+    "name": "elie2222",
+    "url": "https://x.com/elie2222"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Daily Briefing icon"
+    }
+  },
+  "agent": {
+    "role": "Daily Briefing",
+    "instructions": "Set up a new bot for me. Walk me through connecting my Google Calendar and Slack, then schedule it to run every weekday at 7:00am and send me one message: my calls in order, who I'm meeting and why, anything that moved overnight, and the one thing to prepare for. Ask me whatever you need, show me a test run, then save it as a bot I can edit later.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "google-calendar",
+        "description": "Integration with Google Calendar",
+        "required": false
+      },
+      {
+        "name": "slack",
+        "description": "Integration with Slack",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Google Calendar"
+    },
+    {
+      "name": "Slack"
+    }
+  ]
+}

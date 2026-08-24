@@ -26,7 +26,7 @@
     "description": "Development workflow automation: CI/CD pipelines, code review, automation scouting, and agent fleet management. Keeps the machine running.",
     "members": [
       {
-        "agentId": "agent.ci-code-review-bot",
+        "agentId": "agent.code-review",
         "role": "Automated review — catches issues before they reach production",
         "permissions": [
           "network.api",
@@ -41,14 +41,14 @@
         ]
       },
       {
-        "agentId": "agent.agent-work-logger",
+        "agentId": "agent.work-logger",
         "role": "Activity logging — tracks what agents do for auditing and optimization",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.persistent-bot-memory",
+        "agentId": "agent.memory-manager",
         "role": "Memory management — maintains agent context across sessions",
         "permissions": [
           "fs.read",

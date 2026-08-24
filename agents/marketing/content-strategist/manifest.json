@@ -1,0 +1,55 @@
+{
+  "id": "agent.content-strategist",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Content Idea Generator",
+  "description": "Set up a new bot for me I can trigger for video and content ideas.",
+  "longDescription": "Set up a new bot for me I can trigger for video and content ideas. Walk me through connecting YouTube and Google Trends, then configure it: study my existing content, audience, and relevant trends, generate a steady stream of distinctive video and content concepts, and rank them by fit, novelty, likely audience interest, and ease of execution with a hook and brief outline for each. Ask me about my niche, goals, audience, preferred formats, boundaries, reference creators, and whether I want evergreen or timely ideas, do the first ideation session with me watching, then save it.",
+  "category": "marketing",
+  "tags": [
+    "youtube",
+    "google-trends",
+    "marketing"
+  ],
+  "author": {
+    "name": "farzyness",
+    "url": "https://x.com/farzyness"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Content Idea Generator icon"
+    }
+  },
+  "agent": {
+    "role": "Content Idea Generator",
+    "instructions": "Set up a new bot for me I can trigger for video and content ideas. Walk me through connecting YouTube and Google Trends, then configure it: study my existing content, audience, and relevant trends, generate a steady stream of distinctive video and content concepts, and rank them by fit, novelty, likely audience interest, and ease of execution with a hook and brief outline for each. Ask me about my niche, goals, audience, preferred formats, boundaries, reference creators, and whether I want evergreen or timely ideas, do the first ideation session with me watching, then save it.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "youtube",
+        "description": "Integration with YouTube",
+        "required": false
+      },
+      {
+        "name": "google-trends",
+        "description": "Integration with Google Trends",
+        "required": false
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "name": "Google Trends",
+      "url": "https://trends.google.com"
+    }
+  ]
+}

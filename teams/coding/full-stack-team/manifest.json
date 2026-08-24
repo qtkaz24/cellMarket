@@ -5,7 +5,11 @@
   "name": "Full Stack Team",
   "description": "A collaborative team combining frontend and research expertise for end-to-end project delivery.",
   "category": "coding",
-  "tags": ["team", "fullstack", "collaborative"],
+  "tags": [
+    "team",
+    "fullstack",
+    "collaborative"
+  ],
   "author": {
     "name": "Agent Marketplace"
   },
@@ -18,14 +22,23 @@
         "agentId": "agent.frontend-engineer",
         "version": "^1.0.0",
         "role": "Lead developer — builds UI and components",
-        "delegates": ["agent.deep-research"],
-        "permissions": ["fs.read", "fs.write", "terminal.run"]
+        "delegates": [
+          "agent.research-analyst"
+        ],
+        "permissions": [
+          "fs.read",
+          "fs.write",
+          "terminal.run"
+        ]
       },
       {
-        "agentId": "agent.deep-research",
+        "agentId": "agent.research-analyst",
         "version": "^1.0.0",
         "role": "Research specialist — investigates requirements and technologies",
-        "permissions": ["network.api", "fs.write"]
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
       }
     ],
     "orchestration": {

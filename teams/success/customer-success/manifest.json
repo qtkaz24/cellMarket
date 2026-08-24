@@ -26,14 +26,14 @@
     "description": "Full customer lifecycle: support resolution → knowledge base updates → retention programs → expansion through affiliates and sponsorships.",
     "members": [
       {
-        "agentId": "agent.support-resolution-agent",
+        "agentId": "agent.support-resolver",
         "role": "Support triage — classifies, prioritizes, and resolves customer issues",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.support-reply-drafter",
+        "agentId": "agent.support-writer",
         "role": "Response drafting — creates empathetic, accurate support responses",
         "permissions": [
           "network.api",
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "agentId": "agent.help-center-updater",
+        "agentId": "agent.kb-updater",
         "role": "Knowledge base — updates documentation based on resolved issues and FAQs",
         "permissions": [
           "network.api",
@@ -49,14 +49,14 @@
         ]
       },
       {
-        "agentId": "agent.affiliate-program-manager",
+        "agentId": "agent.affiliate-manager",
         "role": "Affiliate growth — manages affiliate relationships and optimizes commission structures",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.sponsorship-negotiator",
+        "agentId": "agent.sponsor-negotiator",
         "role": "Partnership deals — identifies and negotiates sponsorship opportunities",
         "permissions": [
           "network.api",

@@ -1,0 +1,48 @@
+{
+  "id": "agent.linkedin-prospector",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "LinkedIn ICP Prospect Tracker",
+  "description": "Set up a new bot for me I can trigger to find and track LinkedIn prospects.",
+  "longDescription": "Set up a new bot for me I can trigger to find and track LinkedIn prospects. Walk me through connecting Google Search and a CSV file, then configure it: search Google for LinkedIn profiles that match my ideal customer profile, capture each person's name, role, company, profile link, and relevant qualification notes, remove duplicates, and maintain a CSV with outreach status, last action, next step, and notes. Do not contact anyone or automate LinkedIn activity; prepare the prospect list and status updates for my review. Ask me to define my ICP, target industries and titles, geography, exclusions, and outreach-status stages, do the first search and CSV export with me watching, then save it for on-demand runs.",
+  "category": "sales",
+  "tags": [
+    "google-search",
+    "sales"
+  ],
+  "author": {
+    "name": "kr0der",
+    "url": "https://x.com/kr0der"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "LinkedIn ICP Prospect Tracker icon"
+    }
+  },
+  "agent": {
+    "role": "LinkedIn ICP Prospect Tracker",
+    "instructions": "Set up a new bot for me I can trigger to find and track LinkedIn prospects. Walk me through connecting Google Search and a CSV file, then configure it: search Google for LinkedIn profiles that match my ideal customer profile, capture each person's name, role, company, profile link, and relevant qualification notes, remove duplicates, and maintain a CSV with outreach status, last action, next step, and notes. Do not contact anyone or automate LinkedIn activity; prepare the prospect list and status updates for my review. Ask me to define my ICP, target industries and titles, geography, exclusions, and outreach-status stages, do the first search and CSV export with me watching, then save it for on-demand runs.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "google-search",
+        "description": "Integration with Google Search",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "fs.read"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Google Search",
+      "url": "https://www.google.com"
+    }
+  ]
+}

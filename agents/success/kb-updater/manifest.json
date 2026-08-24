@@ -1,0 +1,58 @@
+{
+  "id": "agent.kb-updater",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Help Center Updater",
+  "description": "Set up a new bot for me that triggers whenever a GitHub pull request is merged, in its own dedicated chat.",
+  "longDescription": "Set up a new bot for me that triggers whenever a GitHub pull request is merged, in its own dedicated chat. Walk me through connecting GitHub and Intercom, then configure it to inspect the merged changes, determine whether they affect the UI or a user workflow, find the relevant Intercom help-center article, and recommend an update or draft a new article when none exists. Show me the proposed article and the evidence from the pull request, and hold every publication for my approval. Ask me which repositories and Intercom content areas to monitor, what style and terminology the documentation should use, and which changes should be ignored, run the first update with me watching, then save it.",
+  "category": "success",
+  "tags": [
+    "intercom",
+    "github",
+    "success"
+  ],
+  "author": {
+    "name": "damonchen",
+    "url": "https://x.com/damonchen"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Help Center Updater icon"
+    }
+  },
+  "agent": {
+    "role": "Help Center Updater",
+    "instructions": "Set up a new bot for me that triggers whenever a GitHub pull request is merged, in its own dedicated chat. Walk me through connecting GitHub and Intercom, then configure it to inspect the merged changes, determine whether they affect the UI or a user workflow, find the relevant Intercom help-center article, and recommend an update or draft a new article when none exists. Show me the proposed article and the evidence from the pull request, and hold every publication for my approval. Ask me which repositories and Intercom content areas to monitor, what style and terminology the documentation should use, and which changes should be ignored, run the first update with me watching, then save it.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "intercom",
+        "description": "Integration with Intercom",
+        "required": false
+      },
+      {
+        "name": "github",
+        "description": "Integration with GitHub",
+        "required": false
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Intercom",
+      "url": "https://www.intercom.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    }
+  ]
+}

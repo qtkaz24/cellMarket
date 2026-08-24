@@ -26,35 +26,35 @@
     "description": "Data-driven prospecting: finds ICP matches, tracks intent signals, qualifies leads, and books meetings. Full top-of-funnel automation.",
     "members": [
       {
-        "agentId": "agent.linkedin-icp-prospect-tracker",
+        "agentId": "agent.linkedin-prospector",
         "role": "Prospect discovery — finds ideal customers on LinkedIn and builds enriched lists",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.buyer-intent-reply-queue",
+        "agentId": "agent.intent-responder",
         "role": "Intent detection — monitors signals and queues timely outreach",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.prospect-meeting-booker",
+        "agentId": "agent.meeting-booker",
         "role": "Meeting qualification — qualifies inbound and books discovery calls",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.booking-pipeline-runner",
+        "agentId": "agent.pipeline-runner",
         "role": "Pipeline management — ensures booked meetings convert to opportunities",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.sponsorship-negotiator",
+        "agentId": "agent.sponsor-negotiator",
         "role": "Deal terms — handles sponsorship and partnership negotiations",
         "permissions": [
           "network.api",

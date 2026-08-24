@@ -27,7 +27,7 @@
     "description": "End-to-end revenue machine: content creation drives traffic, traffic converts to leads, leads close into deals. Each agent hands off context to the next.",
     "members": [
       {
-        "agentId": "agent.content-idea-generator",
+        "agentId": "agent.content-strategist",
         "role": "Strategic ideation — identifies what content will drive qualified traffic",
         "permissions": [
           "network.api"
@@ -48,21 +48,21 @@
         ]
       },
       {
-        "agentId": "agent.buyer-intent-reply-queue",
+        "agentId": "agent.intent-responder",
         "role": "Intent capture — identifies buying signals and queues personalized outreach",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.linkedin-icp-prospect-tracker",
+        "agentId": "agent.linkedin-prospector",
         "role": "Prospect discovery — finds ICP matches on LinkedIn and enriches profiles",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.deal-desk-autopilot",
+        "agentId": "agent.deal-manager",
         "role": "Deal progression — moves stalled deals, drafts follow-ups, books meetings",
         "permissions": [
           "network.api",

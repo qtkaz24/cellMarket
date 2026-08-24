@@ -1,0 +1,45 @@
+{
+  "id": "agent.support-resolver",
+  "type": "agent",
+  "version": "1.0.0",
+  "name": "Support Resolution Agent",
+  "description": "Set up a new bot for me I can trigger for customer support from my phone or laptop, in its own dedicated chat.",
+  "longDescription": "Set up a new bot for me I can trigger for customer support from my phone or laptop, in its own dedicated chat. Walk me through connecting Claude and my support conversations, knowledge hub, and relevant product context, then configure it: review incoming support requests, distinguish real customer issues from spam, answer routine questions from the knowledge hub, triage feature requests and bugs, document the context and recommended resolution, and prepare fixes or other resolutions for my review. Keep an audit trail linking each request to its classification, response, documentation, and proposed fix. Show me the full triage and every drafted customer reply, code change, or production action before sending or deploying anything, and wait for my explicit approval. Ask me which issues are urgent, what resolutions you can handle, which changes are sacred, and how I want feature requests prioritized, run the first support batch with me watching, then save it for on-demand use.",
+  "category": "success",
+  "tags": [
+    "claude",
+    "success"
+  ],
+  "author": {
+    "name": "jackfriks",
+    "url": "https://x.com/jackfriks"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Support Resolution Agent icon"
+    }
+  },
+  "agent": {
+    "role": "Support Resolution Agent",
+    "instructions": "Set up a new bot for me I can trigger for customer support from my phone or laptop, in its own dedicated chat. Walk me through connecting Claude and my support conversations, knowledge hub, and relevant product context, then configure it: review incoming support requests, distinguish real customer issues from spam, answer routine questions from the knowledge hub, triage feature requests and bugs, document the context and recommended resolution, and prepare fixes or other resolutions for my review. Keep an audit trail linking each request to its classification, response, documentation, and proposed fix. Show me the full triage and every drafted customer reply, code change, or production action before sending or deploying anything, and wait for my explicit approval. Ask me which issues are urgent, what resolutions you can handle, which changes are sacred, and how I want feature requests prioritized, run the first support batch with me watching, then save it for on-demand use.",
+    "models": {
+      "primary": "claude-sonnet-4"
+    },
+    "tools": [
+      {
+        "name": "claude",
+        "description": "Integration with Claude",
+        "required": false
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Claude",
+      "url": "https://claude.ai"
+    }
+  ]
+}

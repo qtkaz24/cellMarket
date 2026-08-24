@@ -1,10 +1,10 @@
 {
   "$schema": "schemas/index.schema.json",
-  "generatedAt": "2026-08-24T15:19:09.652Z",
+  "generatedAt": "2026-08-24T15:22:29.160Z",
   "totalEntries": 64,
   "entries": [
     {
-      "id": "agent.ad-pacing-digest",
+      "id": "agent.ad-monitor",
       "type": "agent",
       "version": "1.0.0",
       "name": "Ad Pacing Digest",
@@ -16,14 +16,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/ad-pacing-digest",
+      "path": "agents/marketing/ad-monitor",
       "media": [
-        "agents/marketing/ad-pacing-digest/icon.svg"
+        "agents/marketing/ad-monitor/icon.svg"
       ],
-      "checksum": "440001bd667f1956"
+      "checksum": "a4e9ce7a12bc1d0d"
     },
     {
-      "id": "agent.affiliate-program-manager",
+      "id": "agent.affiliate-manager",
       "type": "agent",
       "version": "1.0.0",
       "name": "Affiliate Program Manager",
@@ -34,29 +34,29 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/affiliate-program-manager",
+      "path": "agents/marketing/affiliate-manager",
       "media": [
-        "agents/marketing/affiliate-program-manager/icon.svg"
+        "agents/marketing/affiliate-manager/icon.svg"
       ],
-      "checksum": "9862bef4a120703d"
+      "checksum": "5002104b90c090d9"
     },
     {
-      "id": "agent.agent-work-logger",
+      "id": "agent.analytics-brief",
       "type": "agent",
       "version": "1.0.0",
-      "name": "Agent Work Logger",
-      "description": "Set up a new bot for me that automatically records my agents' work in ClickUp so tasks and decisions do not get lost.",
-      "category": "productivity",
+      "name": "Kobbe Analytics Briefing",
+      "description": "Set up a new bot for me, in its own dedicated chat, that monitors my website analytics in Kobbe and posts a concise performance briefing.",
+      "category": "marketing",
       "tags": [
-        "clickup",
-        "productivity"
+        "kobbe",
+        "marketing"
       ],
       "status": "active",
-      "path": "agents/productivity/agent-work-logger",
+      "path": "agents/marketing/analytics-brief",
       "media": [
-        "agents/productivity/agent-work-logger/icon.svg"
+        "agents/marketing/analytics-brief/icon.svg"
       ],
-      "checksum": "f63405f437acdcc9"
+      "checksum": "30e00524d5402024"
     },
     {
       "id": "agent.automation-scout",
@@ -80,45 +80,26 @@
       "checksum": "6a8064ad6caac7ff"
     },
     {
-      "id": "agent.booking-pipeline-runner",
+      "id": "agent.calendar-guard",
       "type": "agent",
       "version": "1.0.0",
-      "name": "Booking Pipeline Runner",
-      "description": "Set up a new bot that keeps HubSpot deals and Soundcheck gigs in lockstep.",
-      "category": "sales",
+      "name": "Meeting Double",
+      "description": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room.",
+      "category": "productivity",
       "tags": [
-        "soundcheck",
-        "hubspot",
-        "sales"
+        "google-calendar",
+        "zoom",
+        "productivity"
       ],
       "status": "active",
-      "path": "agents/sales/booking-pipeline-runner",
+      "path": "agents/productivity/calendar-guard",
       "media": [
-        "agents/sales/booking-pipeline-runner/icon.svg"
+        "agents/productivity/calendar-guard/icon.svg"
       ],
-      "checksum": "eb02d77c1c82e404"
+      "checksum": "26397321e94dbd53"
     },
     {
-      "id": "agent.buyer-intent-reply-queue",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Buyer Intent Reply Queue",
-      "description": "Set up a new bot for me.",
-      "category": "marketing",
-      "tags": [
-        "hotmention",
-        "slack",
-        "marketing"
-      ],
-      "status": "active",
-      "path": "agents/marketing/buyer-intent-reply-queue",
-      "media": [
-        "agents/marketing/buyer-intent-reply-queue/icon.svg"
-      ],
-      "checksum": "d152118d9c29f85c"
-    },
-    {
-      "id": "agent.carousel-publisher",
+      "id": "agent.carousel-creator",
       "type": "agent",
       "version": "1.0.0",
       "name": "Carousel Publisher",
@@ -133,14 +114,50 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/carousel-publisher",
+      "path": "agents/marketing/carousel-creator",
       "media": [
-        "agents/marketing/carousel-publisher/icon.svg"
+        "agents/marketing/carousel-creator/icon.svg"
       ],
-      "checksum": "8abdf76c7c0e2e52"
+      "checksum": "985ac8594a2e522b"
     },
     {
-      "id": "agent.ci-code-review-bot",
+      "id": "agent.class-action-finder",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Class Action Matcher",
+      "description": "Set up a new bot for me I can trigger for a class-action claim search.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/class-action-finder",
+      "media": [
+        "agents/personal/class-action-finder/icon.svg"
+      ],
+      "checksum": "85249dcf29376c57"
+    },
+    {
+      "id": "agent.code-auditor",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Codebase Hardening Auditor",
+      "description": "Set up a new bot for me that audits a codebase that shipped fast and now needs hardening.",
+      "category": "devops",
+      "tags": [
+        "github",
+        "devops"
+      ],
+      "status": "active",
+      "path": "agents/devops/code-auditor",
+      "media": [
+        "agents/devops/code-auditor/icon.svg"
+      ],
+      "checksum": "ce115553bb6e1955"
+    },
+    {
+      "id": "agent.code-review",
       "type": "agent",
       "version": "1.0.0",
       "name": "CI Code Review Bot",
@@ -152,50 +169,14 @@
         "productivity"
       ],
       "status": "active",
-      "path": "agents/productivity/ci-code-review-bot",
+      "path": "agents/productivity/code-review",
       "media": [
-        "agents/productivity/ci-code-review-bot/icon.svg"
+        "agents/productivity/code-review/icon.svg"
       ],
-      "checksum": "8ef7761fbfb06b6d"
+      "checksum": "d8135a8af234660e"
     },
     {
-      "id": "agent.class-action-matcher",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Class Action Matcher",
-      "description": "Set up a new bot for me I can trigger for a class-action claim search.",
-      "category": "personal",
-      "tags": [
-        "gmail",
-        "personal"
-      ],
-      "status": "active",
-      "path": "agents/personal/class-action-matcher",
-      "media": [
-        "agents/personal/class-action-matcher/icon.svg"
-      ],
-      "checksum": "e7b5f8817511ec3f"
-    },
-    {
-      "id": "agent.codebase-hardening-auditor",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Codebase Hardening Auditor",
-      "description": "Set up a new bot for me that audits a codebase that shipped fast and now needs hardening.",
-      "category": "devops",
-      "tags": [
-        "github",
-        "devops"
-      ],
-      "status": "active",
-      "path": "agents/devops/codebase-hardening-auditor",
-      "media": [
-        "agents/devops/codebase-hardening-auditor/icon.svg"
-      ],
-      "checksum": "3af97f2dab178eae"
-    },
-    {
-      "id": "agent.commission-leak-auditor",
+      "id": "agent.commission-auditor",
       "type": "agent",
       "version": "1.0.0",
       "name": "Commission Leak Auditor",
@@ -206,14 +187,14 @@
         "devops"
       ],
       "status": "active",
-      "path": "agents/devops/commission-leak-auditor",
+      "path": "agents/devops/commission-auditor",
       "media": [
-        "agents/devops/commission-leak-auditor/icon.svg"
+        "agents/devops/commission-auditor/icon.svg"
       ],
-      "checksum": "bd452e4c13bbefcd"
+      "checksum": "a6b79ad6eda0406b"
     },
     {
-      "id": "agent.competitor-ad-watch",
+      "id": "agent.competitor-ads",
       "type": "agent",
       "version": "1.0.0",
       "name": "Competitor Ad Watch",
@@ -225,14 +206,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/competitor-ad-watch",
+      "path": "agents/marketing/competitor-ads",
       "media": [
-        "agents/marketing/competitor-ad-watch/icon.svg"
+        "agents/marketing/competitor-ads/icon.svg"
       ],
-      "checksum": "5dffe2adcd9e7c52"
+      "checksum": "b27b797ae83593c7"
     },
     {
-      "id": "agent.competitor-pricing-watch",
+      "id": "agent.competitor-pricing",
       "type": "agent",
       "version": "1.0.0",
       "name": "Competitor Pricing Watch",
@@ -243,14 +224,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/competitor-pricing-watch",
+      "path": "agents/marketing/competitor-pricing",
       "media": [
-        "agents/marketing/competitor-pricing-watch/icon.svg"
+        "agents/marketing/competitor-pricing/icon.svg"
       ],
-      "checksum": "38e447ab68c3ba61"
+      "checksum": "663c4c1bd1d8a84b"
     },
     {
-      "id": "agent.content-idea-generator",
+      "id": "agent.content-strategist",
       "type": "agent",
       "version": "1.0.0",
       "name": "Content Idea Generator",
@@ -262,14 +243,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/content-idea-generator",
+      "path": "agents/marketing/content-strategist",
       "media": [
-        "agents/marketing/content-idea-generator/icon.svg"
+        "agents/marketing/content-strategist/icon.svg"
       ],
-      "checksum": "dd8b0a619aea3861"
+      "checksum": "b12851ab51768c72"
     },
     {
-      "id": "agent.conversion-tracking-setup",
+      "id": "agent.conversion-tracker",
       "type": "agent",
       "version": "1.0.0",
       "name": "Conversion Tracking Setup",
@@ -280,52 +261,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/conversion-tracking-setup",
+      "path": "agents/marketing/conversion-tracker",
       "media": [
-        "agents/marketing/conversion-tracking-setup/icon.svg"
+        "agents/marketing/conversion-tracker/icon.svg"
       ],
-      "checksum": "68976946795f6ecb"
+      "checksum": "785f37cd4a66b2b4"
     },
     {
-      "id": "agent.critical-security-fixer",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Critical Security Fixer",
-      "description": "Set up a new bot for me that watches Aikido for critical security issues and opens GitHub pull requests to fix them.",
-      "category": "devops",
-      "tags": [
-        "aikido",
-        "github",
-        "devops"
-      ],
-      "status": "active",
-      "path": "agents/devops/critical-security-fixer",
-      "media": [
-        "agents/devops/critical-security-fixer/icon.svg"
-      ],
-      "checksum": "dbaab7023b58f2fa"
-    },
-    {
-      "id": "agent.daily-briefing",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Daily Briefing",
-      "description": "Set up a new bot for me.",
-      "category": "productivity",
-      "tags": [
-        "google-calendar",
-        "slack",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/daily-briefing",
-      "media": [
-        "agents/productivity/daily-briefing/icon.svg"
-      ],
-      "checksum": "a4404018e457434d"
-    },
-    {
-      "id": "agent.daily-focus-adviser",
+      "id": "agent.daily-focus",
       "type": "agent",
       "version": "1.0.0",
       "name": "Daily Focus Adviser",
@@ -336,14 +279,14 @@
         "productivity"
       ],
       "status": "active",
-      "path": "agents/productivity/daily-focus-adviser",
+      "path": "agents/productivity/daily-focus",
       "media": [
-        "agents/productivity/daily-focus-adviser/icon.svg"
+        "agents/productivity/daily-focus/icon.svg"
       ],
-      "checksum": "f5523fc625501d99"
+      "checksum": "6e60c5e8e26935c0"
     },
     {
-      "id": "agent.deal-desk-autopilot",
+      "id": "agent.deal-manager",
       "type": "agent",
       "version": "1.0.0",
       "name": "Deal Desk Autopilot",
@@ -355,31 +298,11 @@
         "sales"
       ],
       "status": "active",
-      "path": "agents/sales/deal-desk-autopilot",
+      "path": "agents/sales/deal-manager",
       "media": [
-        "agents/sales/deal-desk-autopilot/icon.svg"
+        "agents/sales/deal-manager/icon.svg"
       ],
-      "checksum": "22a41bc0b67a6566"
-    },
-    {
-      "id": "agent.deep-research",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Deep Research Analyst",
-      "description": "Thorough research agent that investigates topics, synthesizes information from multiple sources, and produces structured reports with citations.",
-      "category": "research",
-      "tags": [
-        "research",
-        "analysis",
-        "reporting",
-        "citations"
-      ],
-      "status": "active",
-      "path": "agents/research/deep-research",
-      "media": [
-        "agents/research/deep-research/icon.svg"
-      ],
-      "checksum": "c32480834e86b3ad"
+      "checksum": "347831897b8205a3"
     },
     {
       "id": "agent.design-engineer",
@@ -420,7 +343,7 @@
       "checksum": "378ce178c953f265"
     },
     {
-      "id": "agent.email-briefing-assistant",
+      "id": "agent.email-digest",
       "type": "agent",
       "version": "1.0.0",
       "name": "Email Briefing Assistant",
@@ -431,14 +354,14 @@
         "productivity"
       ],
       "status": "active",
-      "path": "agents/productivity/email-briefing-assistant",
+      "path": "agents/productivity/email-digest",
       "media": [
-        "agents/productivity/email-briefing-assistant/icon.svg"
+        "agents/productivity/email-digest/icon.svg"
       ],
-      "checksum": "e0383bc34b37d955"
+      "checksum": "d1da0031126eaf8b"
     },
     {
-      "id": "agent.email-purger",
+      "id": "agent.email-purge",
       "type": "agent",
       "version": "1.0.0",
       "name": "Email Purger",
@@ -449,11 +372,31 @@
         "personal"
       ],
       "status": "active",
-      "path": "agents/personal/email-purger",
+      "path": "agents/personal/email-purge",
       "media": [
-        "agents/personal/email-purger/icon.svg"
+        "agents/personal/email-purge/icon.svg"
       ],
-      "checksum": "a737ccfdeab8ed0f"
+      "checksum": "873c249f67924a0d"
+    },
+    {
+      "id": "agent.finance-assistant",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Personal CFO",
+      "description": "Set up a new bot for me that runs a morning portfolio briefing.",
+      "category": "personal",
+      "tags": [
+        "plaid",
+        "yahoo-finance",
+        "google-calendar",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/finance-assistant",
+      "media": [
+        "agents/personal/finance-assistant/icon.svg"
+      ],
+      "checksum": "481b6ca15af0e175"
     },
     {
       "id": "agent.frontend-engineer",
@@ -474,10 +417,10 @@
       "media": [
         "agents/coding/frontend-engineer/icon.svg"
       ],
-      "checksum": "a30c506147e0f512"
+      "checksum": "bbc80c1345d1409b"
     },
     {
-      "id": "agent.gift-card-and-return-tracker",
+      "id": "agent.gift-card-tracker",
       "type": "agent",
       "version": "1.0.0",
       "name": "Gift Card and Return Tracker",
@@ -488,14 +431,69 @@
         "personal"
       ],
       "status": "active",
-      "path": "agents/personal/gift-card-and-return-tracker",
+      "path": "agents/personal/gift-card-tracker",
       "media": [
-        "agents/personal/gift-card-and-return-tracker/icon.svg"
+        "agents/personal/gift-card-tracker/icon.svg"
       ],
-      "checksum": "79ea33c639ba6a72"
+      "checksum": "cebf1bb9d2432663"
     },
     {
-      "id": "agent.help-center-updater",
+      "id": "agent.inbox-zero",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Inbox Zero Assistant",
+      "description": "Set up a new bot for me I can trigger for inbox zero.",
+      "category": "productivity",
+      "tags": [
+        "gmail",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/inbox-zero",
+      "media": [
+        "agents/productivity/inbox-zero/icon.svg"
+      ],
+      "checksum": "6da1e3b5eea711cb"
+    },
+    {
+      "id": "agent.industry-intel",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Industry Intel Digest",
+      "description": "Set up an always on teammate that keeps me on top of everything moving in my domain on YouTube, so I hear about a launch, a tool or a shift in the conversation before my competitors do.",
+      "category": "marketing",
+      "tags": [
+        "transcriptapi",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/industry-intel",
+      "media": [
+        "agents/marketing/industry-intel/icon.svg"
+      ],
+      "checksum": "3750b6bbdd0c65c5"
+    },
+    {
+      "id": "agent.intent-responder",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Buyer Intent Reply Queue",
+      "description": "Set up a new bot for me.",
+      "category": "marketing",
+      "tags": [
+        "hotmention",
+        "slack",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/intent-responder",
+      "media": [
+        "agents/marketing/intent-responder/icon.svg"
+      ],
+      "checksum": "af5ea664c8b35ff6"
+    },
+    {
+      "id": "agent.kb-updater",
       "type": "agent",
       "version": "1.0.0",
       "name": "Help Center Updater",
@@ -507,68 +505,14 @@
         "success"
       ],
       "status": "active",
-      "path": "agents/success/help-center-updater",
+      "path": "agents/success/kb-updater",
       "media": [
-        "agents/success/help-center-updater/icon.svg"
+        "agents/success/kb-updater/icon.svg"
       ],
-      "checksum": "5acfa1ce9e1c99e3"
+      "checksum": "e64324e6bd065ec0"
     },
     {
-      "id": "agent.inbox-zero-assistant",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Inbox Zero Assistant",
-      "description": "Set up a new bot for me I can trigger for inbox zero.",
-      "category": "productivity",
-      "tags": [
-        "gmail",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/inbox-zero-assistant",
-      "media": [
-        "agents/productivity/inbox-zero-assistant/icon.svg"
-      ],
-      "checksum": "fd55e2b54d169260"
-    },
-    {
-      "id": "agent.industry-intel-digest",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Industry Intel Digest",
-      "description": "Set up an always on teammate that keeps me on top of everything moving in my domain on YouTube, so I hear about a launch, a tool or a shift in the conversation before my competitors do.",
-      "category": "marketing",
-      "tags": [
-        "transcriptapi",
-        "marketing"
-      ],
-      "status": "active",
-      "path": "agents/marketing/industry-intel-digest",
-      "media": [
-        "agents/marketing/industry-intel-digest/icon.svg"
-      ],
-      "checksum": "e3ea53daee0d320d"
-    },
-    {
-      "id": "agent.kobbe-analytics-briefing",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Kobbe Analytics Briefing",
-      "description": "Set up a new bot for me, in its own dedicated chat, that monitors my website analytics in Kobbe and posts a concise performance briefing.",
-      "category": "marketing",
-      "tags": [
-        "kobbe",
-        "marketing"
-      ],
-      "status": "active",
-      "path": "agents/marketing/kobbe-analytics-briefing",
-      "media": [
-        "agents/marketing/kobbe-analytics-briefing/icon.svg"
-      ],
-      "checksum": "1479a1ed5445fb40"
-    },
-    {
-      "id": "agent.linkedin-icp-prospect-tracker",
+      "id": "agent.linkedin-prospector",
       "type": "agent",
       "version": "1.0.0",
       "name": "LinkedIn ICP Prospect Tracker",
@@ -579,14 +523,14 @@
         "sales"
       ],
       "status": "active",
-      "path": "agents/sales/linkedin-icp-prospect-tracker",
+      "path": "agents/sales/linkedin-prospector",
       "media": [
-        "agents/sales/linkedin-icp-prospect-tracker/icon.svg"
+        "agents/sales/linkedin-prospector/icon.svg"
       ],
-      "checksum": "a39ad06d3e57001a"
+      "checksum": "6a9035449bf79d0d"
     },
     {
-      "id": "agent.mail-cleanup-assistant",
+      "id": "agent.mail-cleaner",
       "type": "agent",
       "version": "1.0.0",
       "name": "Mail Cleanup Assistant",
@@ -598,127 +542,14 @@
         "personal"
       ],
       "status": "active",
-      "path": "agents/personal/mail-cleanup-assistant",
+      "path": "agents/personal/mail-cleaner",
       "media": [
-        "agents/personal/mail-cleanup-assistant/icon.svg"
+        "agents/personal/mail-cleaner/icon.svg"
       ],
-      "checksum": "02046b543ff1beed"
+      "checksum": "0c8cc39011f1974a"
     },
     {
-      "id": "agent.marketing-email-unsubscriber",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Marketing Email Unsubscriber",
-      "description": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat.",
-      "category": "personal",
-      "tags": [
-        "gmail",
-        "personal"
-      ],
-      "status": "active",
-      "path": "agents/personal/marketing-email-unsubscriber",
-      "media": [
-        "agents/personal/marketing-email-unsubscriber/icon.svg"
-      ],
-      "checksum": "2c577d1425b68cfe"
-    },
-    {
-      "id": "agent.meeting-double",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Meeting Double",
-      "description": "Set up a new bot for me I can trigger by explicitly sending it into a meeting room.",
-      "category": "productivity",
-      "tags": [
-        "google-calendar",
-        "zoom",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/meeting-double",
-      "media": [
-        "agents/productivity/meeting-double/icon.svg"
-      ],
-      "checksum": "6c44ae1f8837bf30"
-    },
-    {
-      "id": "agent.nexus-coordinator",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Nexus Coordinator",
-      "description": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat.",
-      "category": "productivity",
-      "tags": [
-        "gmail",
-        "google-calendar",
-        "slack",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/nexus-coordinator",
-      "media": [
-        "agents/productivity/nexus-coordinator/icon.svg"
-      ],
-      "checksum": "977122dd989f0bc3"
-    },
-    {
-      "id": "agent.notion-memory-keeper",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Notion Memory Keeper",
-      "description": "Set up a new bot for me I can trigger to maintain a dedicated Notion page.",
-      "category": "productivity",
-      "tags": [
-        "notion",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/notion-memory-keeper",
-      "media": [
-        "agents/productivity/notion-memory-keeper/icon.svg"
-      ],
-      "checksum": "13fa4da6e7d37193"
-    },
-    {
-      "id": "agent.persistent-bot-memory",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Persistent Bot Memory",
-      "description": "Set up a new bot that persists knowledge from my bots to one GitHub repo.",
-      "category": "productivity",
-      "tags": [
-        "github",
-        "productivity"
-      ],
-      "status": "active",
-      "path": "agents/productivity/persistent-bot-memory",
-      "media": [
-        "agents/productivity/persistent-bot-memory/icon.svg"
-      ],
-      "checksum": "4be525d8fe4036ad"
-    },
-    {
-      "id": "agent.personal-cfo",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Personal CFO",
-      "description": "Set up a new bot for me that runs a morning portfolio briefing.",
-      "category": "personal",
-      "tags": [
-        "plaid",
-        "yahoo-finance",
-        "google-calendar",
-        "personal"
-      ],
-      "status": "active",
-      "path": "agents/personal/personal-cfo",
-      "media": [
-        "agents/personal/personal-cfo/icon.svg"
-      ],
-      "checksum": "e8d8069fe21a4033"
-    },
-    {
-      "id": "agent.prospect-meeting-booker",
+      "id": "agent.meeting-booker",
       "type": "agent",
       "version": "1.0.0",
       "name": "Prospect Meeting Booker",
@@ -731,11 +562,85 @@
         "sales"
       ],
       "status": "active",
-      "path": "agents/sales/prospect-meeting-booker",
+      "path": "agents/sales/meeting-booker",
       "media": [
-        "agents/sales/prospect-meeting-booker/icon.svg"
+        "agents/sales/meeting-booker/icon.svg"
       ],
-      "checksum": "9b9323d27e548592"
+      "checksum": "a0c4947d5d6353b0"
+    },
+    {
+      "id": "agent.memory-manager",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Persistent Bot Memory",
+      "description": "Set up a new bot that persists knowledge from my bots to one GitHub repo.",
+      "category": "productivity",
+      "tags": [
+        "github",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/memory-manager",
+      "media": [
+        "agents/productivity/memory-manager/icon.svg"
+      ],
+      "checksum": "e497cd1a8dc87400"
+    },
+    {
+      "id": "agent.morning-brief",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Daily Briefing",
+      "description": "Set up a new bot for me.",
+      "category": "productivity",
+      "tags": [
+        "google-calendar",
+        "slack",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/morning-brief",
+      "media": [
+        "agents/productivity/morning-brief/icon.svg"
+      ],
+      "checksum": "a9c05b727b24e48a"
+    },
+    {
+      "id": "agent.notion-memory",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Notion Memory Keeper",
+      "description": "Set up a new bot for me I can trigger to maintain a dedicated Notion page.",
+      "category": "productivity",
+      "tags": [
+        "notion",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/notion-memory",
+      "media": [
+        "agents/productivity/notion-memory/icon.svg"
+      ],
+      "checksum": "0074c29fb70085f7"
+    },
+    {
+      "id": "agent.pipeline-runner",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Booking Pipeline Runner",
+      "description": "Set up a new bot that keeps HubSpot deals and Soundcheck gigs in lockstep.",
+      "category": "sales",
+      "tags": [
+        "soundcheck",
+        "hubspot",
+        "sales"
+      ],
+      "status": "active",
+      "path": "agents/sales/pipeline-runner",
+      "media": [
+        "agents/sales/pipeline-runner/icon.svg"
+      ],
+      "checksum": "9e9c5bc54b421215"
     },
     {
       "id": "agent.refund-hunter",
@@ -756,26 +661,66 @@
       "checksum": "7d83728e7e5239d3"
     },
     {
-      "id": "agent.social-content-operator",
+      "id": "agent.research-analyst",
       "type": "agent",
       "version": "1.0.0",
-      "name": "Social Content Operator",
-      "description": "Set up a new bot for me, in its own dedicated chat, that operates my social publishing through Delulu Social.",
-      "category": "marketing",
+      "name": "Deep Research Analyst",
+      "description": "Thorough research agent that investigates topics, synthesizes information from multiple sources, and produces structured reports with citations.",
+      "category": "research",
       "tags": [
-        "delulu-social",
-        "google-drive",
-        "marketing"
+        "research",
+        "analysis",
+        "reporting",
+        "citations"
       ],
       "status": "active",
-      "path": "agents/marketing/social-content-operator",
+      "path": "agents/research/research-analyst",
       "media": [
-        "agents/marketing/social-content-operator/icon.svg"
+        "agents/research/research-analyst/icon.svg"
       ],
-      "checksum": "47c602597dedf464"
+      "checksum": "f924a2603c489904"
     },
     {
-      "id": "agent.social-media-diet",
+      "id": "agent.schedule-coordinator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Nexus Coordinator",
+      "description": "Set up a new bot for me that coordinates recurring work and handoffs in its own dedicated chat.",
+      "category": "productivity",
+      "tags": [
+        "gmail",
+        "google-calendar",
+        "slack",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "agents/productivity/schedule-coordinator",
+      "media": [
+        "agents/productivity/schedule-coordinator/icon.svg"
+      ],
+      "checksum": "7529d90d4981606d"
+    },
+    {
+      "id": "agent.security-fixer",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Critical Security Fixer",
+      "description": "Set up a new bot for me that watches Aikido for critical security issues and opens GitHub pull requests to fix them.",
+      "category": "devops",
+      "tags": [
+        "aikido",
+        "github",
+        "devops"
+      ],
+      "status": "active",
+      "path": "agents/devops/security-fixer",
+      "media": [
+        "agents/devops/security-fixer/icon.svg"
+      ],
+      "checksum": "40c30b730afabdd5"
+    },
+    {
+      "id": "agent.social-detox",
       "type": "agent",
       "version": "1.0.0",
       "name": "Social Media Diet",
@@ -788,11 +733,11 @@
         "personal"
       ],
       "status": "active",
-      "path": "agents/personal/social-media-diet",
+      "path": "agents/personal/social-detox",
       "media": [
-        "agents/personal/social-media-diet/icon.svg"
+        "agents/personal/social-detox/icon.svg"
       ],
-      "checksum": "9596edeb9076ca14"
+      "checksum": "b028da5c93aa8895"
     },
     {
       "id": "agent.social-media-manager",
@@ -813,7 +758,45 @@
       "checksum": "c874a68c8719e0d0"
     },
     {
-      "id": "agent.sponsorship-negotiator",
+      "id": "agent.social-operator",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Social Content Operator",
+      "description": "Set up a new bot for me, in its own dedicated chat, that operates my social publishing through Delulu Social.",
+      "category": "marketing",
+      "tags": [
+        "delulu-social",
+        "google-drive",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/social-operator",
+      "media": [
+        "agents/marketing/social-operator/icon.svg"
+      ],
+      "checksum": "c427d2cd9aa9e26d"
+    },
+    {
+      "id": "agent.social-scheduler",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Weekly Social Queue",
+      "description": "Set up a new bot for me in its own dedicated chat that fills and runs my social publishing queue for the week.",
+      "category": "marketing",
+      "tags": [
+        "bulkpublish",
+        "notion",
+        "marketing"
+      ],
+      "status": "active",
+      "path": "agents/marketing/social-scheduler",
+      "media": [
+        "agents/marketing/social-scheduler/icon.svg"
+      ],
+      "checksum": "0c3f897248b678a2"
+    },
+    {
+      "id": "agent.sponsor-negotiator",
       "type": "agent",
       "version": "1.0.0",
       "name": "Sponsorship Negotiator",
@@ -824,14 +807,14 @@
         "sales"
       ],
       "status": "active",
-      "path": "agents/sales/sponsorship-negotiator",
+      "path": "agents/sales/sponsor-negotiator",
       "media": [
-        "agents/sales/sponsorship-negotiator/icon.svg"
+        "agents/sales/sponsor-negotiator/icon.svg"
       ],
-      "checksum": "24def8a90c503a70"
+      "checksum": "9f30772e2fe60055"
     },
     {
-      "id": "agent.subscription-cancellation-advisor",
+      "id": "agent.subscription-auditor",
       "type": "agent",
       "version": "1.0.0",
       "name": "Subscription Cancellation Advisor",
@@ -842,32 +825,14 @@
         "personal"
       ],
       "status": "active",
-      "path": "agents/personal/subscription-cancellation-advisor",
+      "path": "agents/personal/subscription-auditor",
       "media": [
-        "agents/personal/subscription-cancellation-advisor/icon.svg"
+        "agents/personal/subscription-auditor/icon.svg"
       ],
-      "checksum": "f792fa1e4ecb2a80"
+      "checksum": "7af415abfb4984fe"
     },
     {
-      "id": "agent.support-reply-drafter",
-      "type": "agent",
-      "version": "1.0.0",
-      "name": "Support Reply Drafter",
-      "description": "Set up a new bot for me I can trigger for support auto-replies.",
-      "category": "success",
-      "tags": [
-        "gmail",
-        "success"
-      ],
-      "status": "active",
-      "path": "agents/success/support-reply-drafter",
-      "media": [
-        "agents/success/support-reply-drafter/icon.svg"
-      ],
-      "checksum": "dbe8905ed52ce64b"
-    },
-    {
-      "id": "agent.support-resolution-agent",
+      "id": "agent.support-resolver",
       "type": "agent",
       "version": "1.0.0",
       "name": "Support Resolution Agent",
@@ -878,11 +843,47 @@
         "success"
       ],
       "status": "active",
-      "path": "agents/success/support-resolution-agent",
+      "path": "agents/success/support-resolver",
       "media": [
-        "agents/success/support-resolution-agent/icon.svg"
+        "agents/success/support-resolver/icon.svg"
       ],
-      "checksum": "8f7248d7db8724cc"
+      "checksum": "dcf898658629d907"
+    },
+    {
+      "id": "agent.support-writer",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Support Reply Drafter",
+      "description": "Set up a new bot for me I can trigger for support auto-replies.",
+      "category": "success",
+      "tags": [
+        "gmail",
+        "success"
+      ],
+      "status": "active",
+      "path": "agents/success/support-writer",
+      "media": [
+        "agents/success/support-writer/icon.svg"
+      ],
+      "checksum": "d8b4080950666ebe"
+    },
+    {
+      "id": "agent.unsubscriber",
+      "type": "agent",
+      "version": "1.0.0",
+      "name": "Marketing Email Unsubscriber",
+      "description": "Set up a new bot for me I can trigger for an unsubscribe sweep, in its own dedicated chat.",
+      "category": "personal",
+      "tags": [
+        "gmail",
+        "personal"
+      ],
+      "status": "active",
+      "path": "agents/personal/unsubscriber",
+      "media": [
+        "agents/personal/unsubscriber/icon.svg"
+      ],
+      "checksum": "0910cdf517ff5e22"
     },
     {
       "id": "agent.video-strategist",
@@ -903,26 +904,25 @@
       "checksum": "b34b1b7c054eb526"
     },
     {
-      "id": "agent.weekly-social-queue",
+      "id": "agent.work-logger",
       "type": "agent",
       "version": "1.0.0",
-      "name": "Weekly Social Queue",
-      "description": "Set up a new bot for me in its own dedicated chat that fills and runs my social publishing queue for the week.",
-      "category": "marketing",
+      "name": "Agent Work Logger",
+      "description": "Set up a new bot for me that automatically records my agents' work in ClickUp so tasks and decisions do not get lost.",
+      "category": "productivity",
       "tags": [
-        "bulkpublish",
-        "notion",
-        "marketing"
+        "clickup",
+        "productivity"
       ],
       "status": "active",
-      "path": "agents/marketing/weekly-social-queue",
+      "path": "agents/productivity/work-logger",
       "media": [
-        "agents/marketing/weekly-social-queue/icon.svg"
+        "agents/productivity/work-logger/icon.svg"
       ],
-      "checksum": "a8cadef4a1257f17"
+      "checksum": "dc492c0ec4eb6669"
     },
     {
-      "id": "agent.writing-buddy",
+      "id": "agent.writing-assistant",
       "type": "agent",
       "version": "1.0.0",
       "name": "Writing Buddy",
@@ -934,14 +934,14 @@
         "productivity"
       ],
       "status": "active",
-      "path": "agents/productivity/writing-buddy",
+      "path": "agents/productivity/writing-assistant",
       "media": [
-        "agents/productivity/writing-buddy/icon.svg"
+        "agents/productivity/writing-assistant/icon.svg"
       ],
-      "checksum": "519443084019b3ed"
+      "checksum": "08c82c0e59e8d47a"
     },
     {
-      "id": "agent.youtube-competitor-tracker",
+      "id": "agent.youtube-monitor",
       "type": "agent",
       "version": "1.0.0",
       "name": "YouTube Competitor Tracker",
@@ -952,14 +952,14 @@
         "marketing"
       ],
       "status": "active",
-      "path": "agents/marketing/youtube-competitor-tracker",
+      "path": "agents/marketing/youtube-monitor",
       "media": [
-        "agents/marketing/youtube-competitor-tracker/icon.svg"
+        "agents/marketing/youtube-monitor/icon.svg"
       ],
-      "checksum": "8b7e0aff81b00494"
+      "checksum": "87498a7451e34387"
     },
     {
-      "id": "agent.youtube-research-analyst",
+      "id": "agent.youtube-research",
       "type": "agent",
       "version": "1.0.0",
       "name": "YouTube Research Analyst",
@@ -970,11 +970,11 @@
         "productivity"
       ],
       "status": "active",
-      "path": "agents/productivity/youtube-research-analyst",
+      "path": "agents/productivity/youtube-research",
       "media": [
-        "agents/productivity/youtube-research-analyst/icon.svg"
+        "agents/productivity/youtube-research/icon.svg"
       ],
-      "checksum": "3b8b41d9b44cb184"
+      "checksum": "0a28dba4f7d00da0"
     },
     {
       "id": "team.competitive-intelligence",
@@ -994,7 +994,7 @@
       "media": [
         "teams/research/competitive-intelligence/icon.svg"
       ],
-      "checksum": "d786739d46270889"
+      "checksum": "66d63fa1d46ab493"
     },
     {
       "id": "team.content-factory",
@@ -1014,7 +1014,7 @@
       "media": [
         "teams/marketing/content-factory/icon.svg"
       ],
-      "checksum": "444b3c6ef29cb0f5"
+      "checksum": "44918f8792310b12"
     },
     {
       "id": "team.customer-success",
@@ -1034,7 +1034,7 @@
       "media": [
         "teams/success/customer-success/icon.svg"
       ],
-      "checksum": "45d68e224868400a"
+      "checksum": "2e07532295520c87"
     },
     {
       "id": "team.devops-automation",
@@ -1054,7 +1054,7 @@
       "media": [
         "teams/devops/devops-automation/icon.svg"
       ],
-      "checksum": "341fdfd016730e2d"
+      "checksum": "fc8a79e9cd838e8f"
     },
     {
       "id": "team.digital-hygiene",
@@ -1075,7 +1075,7 @@
       "media": [
         "teams/personal/digital-hygiene/icon.svg"
       ],
-      "checksum": "fe0e0a96f07e5447"
+      "checksum": "d3edb289fc95a01b"
     },
     {
       "id": "team.executive-office",
@@ -1096,7 +1096,7 @@
       "media": [
         "teams/productivity/executive-office/icon.svg"
       ],
-      "checksum": "84632f13bc989fd3"
+      "checksum": "c504c299912b7e3c"
     },
     {
       "id": "team.full-stack-team",
@@ -1113,7 +1113,7 @@
       "status": "active",
       "path": "teams/coding/full-stack-team",
       "media": [],
-      "checksum": "37c8a85003648c57"
+      "checksum": "187ccb015743db56"
     },
     {
       "id": "team.growth-engine",
@@ -1134,7 +1134,7 @@
       "media": [
         "teams/marketing/growth-engine/icon.svg"
       ],
-      "checksum": "e45cb88d773e84de"
+      "checksum": "3894cca59fd2e1ac"
     },
     {
       "id": "team.revenue-ops",
@@ -1154,7 +1154,7 @@
       "media": [
         "teams/sales/revenue-ops/icon.svg"
       ],
-      "checksum": "64f0ab2162139707"
+      "checksum": "92880f5f110702b5"
     },
     {
       "id": "team.sales-intelligence",
@@ -1174,7 +1174,7 @@
       "media": [
         "teams/sales/sales-intelligence/icon.svg"
       ],
-      "checksum": "efe614ad7c8e28c4"
+      "checksum": "dd2e949ef02acf78"
     },
     {
       "id": "team.security-compliance",
@@ -1194,7 +1194,7 @@
       "media": [
         "teams/devops/security-compliance/icon.svg"
       ],
-      "checksum": "383a8915e56754f5"
+      "checksum": "2a05b8f1151bb2c4"
     },
     {
       "id": "workflow.code-review-pipeline",
@@ -1212,7 +1212,7 @@
       "status": "active",
       "path": "workflows/development/code-review-pipeline",
       "media": [],
-      "checksum": "663b4d78525af5d6"
+      "checksum": "c99d4bdd8655df04"
     }
   ]
 }
