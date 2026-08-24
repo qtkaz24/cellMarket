@@ -7,6 +7,7 @@
   "scripts": {
     "validate": "node scripts/validate.js",
     "build:index": "node scripts/build-index.js",
+    "search": "node scripts/search.js",
     "ci": "npm run validate && npm run build:index && node scripts/verify-index.js"
   },
   "dependencies": {

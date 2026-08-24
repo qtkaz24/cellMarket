@@ -1,0 +1,148 @@
+{
+  "id": "workflow.8273645",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Content Factory Pipeline",
+  "description": "Full content lifecycle in one run: ideation → writing → carousel creation → scheduling → performance analysis. Produces a week of content.",
+  "category": "marketing",
+  "tags": [
+    "content",
+    "pipeline",
+    "automation",
+    "weekly"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Content Factory Pipeline icon"
+    }
+  },
+  "workflow": {
+    "description": "Full content lifecycle in one run: ideation → writing → carousel creation → scheduling → performance analysis. Produces a week of content.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every Friday at 2:00pm",
+        "config": {
+          "cron": "0 14 * * 5"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.7048139",
+        "role": "Generate 5 content ideas",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.1461662",
+        "role": "Write drafts for each idea",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.9587372",
+        "role": "Create carousel posts for top 3",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.5130243",
+        "role": "Schedule all content",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.2169231",
+        "role": "Analyze last week performance",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "ideate",
+        "agentId": "agent.7048139",
+        "output": {
+          "ideas": "result"
+        },
+        "next": "write-drafts"
+      },
+      {
+        "type": "agent",
+        "name": "write-drafts",
+        "agentId": "agent.1461662",
+        "input": {
+          "ideas": "ideate.ideas"
+        },
+        "output": {
+          "drafts": "result"
+        },
+        "next": "create-carousels"
+      },
+      {
+        "type": "agent",
+        "name": "create-carousels",
+        "agentId": "agent.9587372",
+        "input": {
+          "drafts": "write-drafts.drafts"
+        },
+        "output": {
+          "carousels": "result"
+        },
+        "next": "schedule"
+      },
+      {
+        "type": "agent",
+        "name": "schedule",
+        "agentId": "agent.5130243",
+        "input": {
+          "content": "create-carousels.carousels"
+        },
+        "output": {
+          "schedule": "result"
+        },
+        "next": "analyze"
+      },
+      {
+        "type": "agent",
+        "name": "analyze",
+        "agentId": "agent.2169231",
+        "input": {
+          "schedule": "schedule.result"
+        },
+        "output": {
+          "report": "result"
+        },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": "analyze.report"
+        }
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.write"
+    ]
+  }
+}

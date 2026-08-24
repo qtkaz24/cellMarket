@@ -1,0 +1,167 @@
+{
+  "id": "workflow.3847291",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Growth Pipeline",
+  "description": "End-to-end growth machine: generates content ideas, schedules posts, tracks competitor ads, monitors analytics, and captures buyer intent. Runs weekly.",
+  "category": "marketing",
+  "tags": [
+    "growth",
+    "automation",
+    "pipeline",
+    "weekly"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Growth Pipeline icon"
+    }
+  },
+  "workflow": {
+    "description": "End-to-end growth machine: generates content ideas, schedules posts, tracks competitor ads, monitors analytics, and captures buyer intent. Runs weekly.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every Monday at 9:00am",
+        "config": {
+          "cron": "0 9 * * 1"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.7048139",
+        "role": "Generate 10 content ideas for the week",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.9196757",
+        "role": "Create video briefs from top ideas",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.5130243",
+        "role": "Schedule content across platforms",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.5422127",
+        "role": "Monitor competitor ad changes",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.2169231",
+        "role": "Report last week performance metrics",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.4548475",
+        "role": "Flag any buyer intent signals",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "generate-ideas",
+        "agentId": "agent.7048139",
+        "input": {
+          "period": "this week"
+        },
+        "output": {
+          "ideas": "result"
+        },
+        "next": "create-video-briefs"
+      },
+      {
+        "type": "agent",
+        "name": "create-video-briefs",
+        "agentId": "agent.9196757",
+        "input": {
+          "ideas": "generate-ideas.ideas"
+        },
+        "output": {
+          "briefs": "result"
+        },
+        "next": "schedule-content"
+      },
+      {
+        "type": "agent",
+        "name": "schedule-content",
+        "agentId": "agent.5130243",
+        "input": {
+          "content": "create-video-briefs.briefs"
+        },
+        "output": {
+          "schedule": "result"
+        },
+        "next": "monitor-competitors"
+      },
+      {
+        "type": "parallel",
+        "name": "monitor-competitors",
+        "children": [
+          {
+            "type": "agent",
+            "name": "check-ads",
+            "agentId": "agent.5422127",
+            "output": {
+              "ads": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "check-analytics",
+            "agentId": "agent.2169231",
+            "output": {
+              "metrics": "result"
+            }
+          }
+        ],
+        "next": "capture-intent"
+      },
+      {
+        "type": "agent",
+        "name": "capture-intent",
+        "agentId": "agent.4548475",
+        "input": {
+          "metrics": "monitor-competitors.metrics"
+        },
+        "output": {
+          "signals": "result"
+        },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": "capture-intent.signals"
+        }
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  }
+}

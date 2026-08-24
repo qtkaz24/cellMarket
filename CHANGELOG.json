@@ -1,0 +1,76 @@
+{
+  "releases": [
+    {
+      "version": "1.0.0",
+      "date": "2026-08-24",
+      "type": "initial",
+      "summary": "Initial marketplace launch with 54 agents, 11 teams, and 1 seed workflow.",
+      "changes": [
+        { "type": "added", "description": "54 agents across 10 categories" },
+        { "type": "added", "description": "11 cross-functional teams" },
+        { "type": "added", "description": "JSON Schemas for agent, team, workflow, and index" },
+        { "type": "added", "description": "Validation pipeline (schema, IDs, semver, media, security)" },
+        { "type": "added", "description": "Deterministic index generator" },
+        { "type": "added", "description": "GitHub Actions CI" },
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-08-24",
+      "type": "minor",
+      "summary": "Integrated 50 agents from botdirectory.ai community directory.",
+      "changes": [
+        { "type": "added", "description": "50 agents from botdirectory.ai (MIT)" },
+        { "type": "added", "description": "New categories: marketing, personal, sales, success" },
+        { "type": "added", "description": "Integrations field in agent schema" },
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-08-24",
+      "type": "minor",
+      "summary": "10 intelligent cross-functional teams combining agents from multiple categories.",
+      "changes": [
+        { "type": "added", "description": "Growth Engine — content → traffic → leads → deals" },
+        { "type": "added", "description": "Revenue Ops — bookings → pipeline → commission → retention" },
+        { "type": "added", "description": "Content Factory — ideation → creation → scheduling → analytics" },
+        { "type": "added", "description": "Competitive Intelligence — parallel competitor monitoring" },
+        { "type": "added", "description": "Customer Success — support → knowledge base → expansion" },
+        { "type": "added", "description": "Executive Office — daily operating rhythm" },
+        { "type": "added", "description": "Security & Compliance — proactive security posture" },
+        { "type": "added", "description": "Digital Hygiene — digital life cleanup" },
+        { "type": "added", "description": "DevOps Automation — development workflow automation" },
+        { "type": "added", "description": "Sales Intelligence — data-driven prospecting" },
+        { "type": "added", "description": "Team schema: workspace scope" },
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-08-24",
+      "type": "minor",
+      "summary": "Stable numeric IDs (Discord-style) — agents can be renamed without breaking references.",
+      "changes": [
+        { "type": "changed", "description": "All agent IDs changed to stable 7-digit numeric format (agent.4459577)" },
+        { "type": "changed", "description": "Team/workflow references updated to use numeric IDs" },
+        { "type": "added", "description": "Schema enforcement for numeric ID pattern" },
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-08-24",
+      "type": "minor",
+      "summary": "6 automated workflows, search API, bundles, and changelog system.",
+      "changes": [
+        { "type": "added", "description": "Growth Pipeline — weekly content + competitor + intent monitoring" },
+        { "type": "added", "description": "Content Factory Pipeline — full content lifecycle automation" },
+        { "type": "added", "description": "Sales Intelligence Pipeline — daily prospecting automation" },
+        { "type": "added", "description": "Security Audit Pipeline — weekly security posture scan" },
+        { "type": "added", "description": "Executive Morning Routine — daily chief of staff briefing" },
+        { "type": "added", "description": "Competitive Intelligence Sweep — weekly landscape scan" },
+        { "type": "added", "description": "Search API script (query, filter, paginate)" },
+        { "type": "added", "description": "6 curated bundles for one-click installation" },
+        { "type": "added", "description": "Changelog / release notes system" },
+      ]
+    }
+  ]
+}

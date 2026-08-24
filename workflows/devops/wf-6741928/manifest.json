@@ -1,0 +1,135 @@
+{
+  "id": "workflow.6741928",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Security Audit Pipeline",
+  "description": "Automated security posture check: scans for critical vulnerabilities, audits codebase hardening, reviews open PRs, and produces a unified risk report.",
+  "category": "devops",
+  "tags": [
+    "security",
+    "audit",
+    "ci",
+    "weekly"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Security Audit Pipeline icon"
+    }
+  },
+  "workflow": {
+    "description": "Automated security posture check: scans for critical vulnerabilities, audits codebase hardening, reviews open PRs, and produces a unified risk report.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every Wednesday at 10:00am",
+        "config": {
+          "cron": "0 10 * * 3"
+        }
+      },
+      {
+        "type": "event",
+        "description": "On critical security alert",
+        "config": {
+          "event": "security.critical"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.9014962",
+        "role": "Fix critical security issues via PR",
+        "permissions": [
+          "network.api",
+          "fs.read",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.2950032",
+        "role": "Audit codebase for security patterns",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.8086657",
+        "role": "Review open PRs for issues",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.4391191",
+        "role": "Audit commission tracking",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "parallel",
+        "name": "scan-all",
+        "children": [
+          {
+            "type": "agent",
+            "name": "fix-critical",
+            "agentId": "agent.9014962",
+            "output": {
+              "fixes": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "audit-codebase",
+            "agentId": "agent.2950032",
+            "output": {
+              "findings": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "review-prs",
+            "agentId": "agent.8086657",
+            "output": {
+              "reviews": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "audit-commissions",
+            "agentId": "agent.4391191",
+            "output": {
+              "audit": "result"
+            }
+          }
+        ],
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": "scan-all.*"
+        }
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.read",
+      "fs.write"
+    ]
+  }
+}

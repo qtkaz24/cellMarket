@@ -1,0 +1,127 @@
+{
+  "id": "workflow.5192834",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Sales Intelligence Pipeline",
+  "description": "Automated prospecting: finds ICP matches on LinkedIn, detects buyer intent, qualifies leads, and books meetings. Runs daily.",
+  "category": "sales",
+  "tags": [
+    "prospecting",
+    "pipeline",
+    "automation",
+    "daily"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Sales Intelligence Pipeline icon"
+    }
+  },
+  "workflow": {
+    "description": "Automated prospecting: finds ICP matches on LinkedIn, detects buyer intent, qualifies leads, and books meetings. Runs daily.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every weekday at 8:00am",
+        "config": {
+          "cron": "0 8 * * 1-5"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.2175062",
+        "role": "Find 20 new ICP prospects",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.4548475",
+        "role": "Check for intent signals",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.1523153",
+        "role": "Qualify and book meetings",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.8059809",
+        "role": "Update pipeline status",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "find-prospects",
+        "agentId": "agent.2175062",
+        "output": {
+          "prospects": "result"
+        },
+        "next": "check-intent"
+      },
+      {
+        "type": "agent",
+        "name": "check-intent",
+        "agentId": "agent.4548475",
+        "input": {
+          "prospects": "find-prospects.prospects"
+        },
+        "output": {
+          "qualified": "result"
+        },
+        "next": "book-meetings"
+      },
+      {
+        "type": "agent",
+        "name": "book-meetings",
+        "agentId": "agent.1523153",
+        "input": {
+          "leads": "check-intent.qualified"
+        },
+        "output": {
+          "meetings": "result"
+        },
+        "next": "update-pipeline"
+      },
+      {
+        "type": "agent",
+        "name": "update-pipeline",
+        "agentId": "agent.8059809",
+        "input": {
+          "meetings": "book-meetings.meetings"
+        },
+        "output": {
+          "summary": "result"
+        },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": "update-pipeline.summary"
+        }
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  }
+}

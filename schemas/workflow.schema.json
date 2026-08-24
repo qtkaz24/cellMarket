@@ -37,7 +37,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development"]
+      "enum": ["coding", "research", "finance", "productivity", "design", "devops", "development", "marketing", "personal", "sales", "success"]
     },
     "tags": {
       "type": "array",

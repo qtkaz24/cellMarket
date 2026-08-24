@@ -1,0 +1,143 @@
+{
+  "id": "workflow.9384756",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Executive Morning Routine",
+  "description": "Daily executive briefing: morning summary → focus priorities → inbox triage → calendar check → personal finance update. Your AI chief of staff.",
+  "category": "productivity",
+  "tags": [
+    "executive",
+    "morning",
+    "daily",
+    "routine"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Executive Morning Routine icon"
+    }
+  },
+  "workflow": {
+    "description": "Daily executive briefing: morning summary → focus priorities → inbox triage → calendar check → personal finance update. Your AI chief of staff.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every weekday at 6:30am",
+        "config": {
+          "cron": "30 6 * * 1-5"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.6314455",
+        "role": "Morning briefing",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.9807576",
+        "role": "Daily focus priorities",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.7269520",
+        "role": "Inbox triage",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.4257351",
+        "role": "Calendar check",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.9768995",
+        "role": "Finance update",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "agent",
+        "name": "briefing",
+        "agentId": "agent.6314455",
+        "output": {
+          "summary": "result"
+        },
+        "next": "focus"
+      },
+      {
+        "type": "agent",
+        "name": "focus",
+        "agentId": "agent.9807576",
+        "input": {
+          "briefing": "briefing.summary"
+        },
+        "output": {
+          "priorities": "result"
+        },
+        "next": "inbox"
+      },
+      {
+        "type": "agent",
+        "name": "inbox",
+        "agentId": "agent.7269520",
+        "output": {
+          "emails": "result"
+        },
+        "next": "calendar"
+      },
+      {
+        "type": "agent",
+        "name": "calendar",
+        "agentId": "agent.4257351",
+        "output": {
+          "meetings": "result"
+        },
+        "next": "finance"
+      },
+      {
+        "type": "agent",
+        "name": "finance",
+        "agentId": "agent.9768995",
+        "output": {
+          "portfolio": "result"
+        },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": {
+            "summary": "briefing.summary",
+            "priorities": "focus.priorities",
+            "emails": "inbox.emails",
+            "meetings": "calendar.meetings",
+            "portfolio": "finance.portfolio"
+          }
+        }
+      }
+    ],
+    "permissions": [
+      "network.api"
+    ]
+  }
+}

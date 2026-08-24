@@ -1,7 +1,7 @@
 {
   "$schema": "schemas/index.schema.json",
-  "generatedAt": "2026-08-24T15:26:45.967Z",
-  "totalEntries": 64,
+  "generatedAt": "2026-08-24T15:37:31.721Z",
+  "totalEntries": 70,
   "entries": [
     {
       "id": "agent.1010094",
@@ -1195,6 +1195,126 @@
         "teams/devops/security-compliance/icon.svg"
       ],
       "checksum": "f8de1485dfee7f47"
+    },
+    {
+      "id": "workflow.2748391",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Competitive Intelligence Sweep",
+      "description": "Full competitive landscape scan: competitor ads, pricing changes, YouTube strategy, industry trends. Synthesized into one intelligence report.",
+      "category": "research",
+      "tags": [
+        "competitive",
+        "intelligence",
+        "research",
+        "weekly"
+      ],
+      "status": "active",
+      "path": "workflows/research/wf-2748391",
+      "media": [
+        "workflows/research/wf-2748391/icon.svg"
+      ],
+      "checksum": "68fc1bf8a23a324c"
+    },
+    {
+      "id": "workflow.3847291",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Growth Pipeline",
+      "description": "End-to-end growth machine: generates content ideas, schedules posts, tracks competitor ads, monitors analytics, and captures buyer intent. Runs weekly.",
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "automation",
+        "pipeline",
+        "weekly"
+      ],
+      "status": "active",
+      "path": "workflows/marketing/wf-3847291",
+      "media": [
+        "workflows/marketing/wf-3847291/icon.svg"
+      ],
+      "checksum": "c3f8b965b14d94ba"
+    },
+    {
+      "id": "workflow.5192834",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Sales Intelligence Pipeline",
+      "description": "Automated prospecting: finds ICP matches on LinkedIn, detects buyer intent, qualifies leads, and books meetings. Runs daily.",
+      "category": "sales",
+      "tags": [
+        "prospecting",
+        "pipeline",
+        "automation",
+        "daily"
+      ],
+      "status": "active",
+      "path": "workflows/sales/wf-5192834",
+      "media": [
+        "workflows/sales/wf-5192834/icon.svg"
+      ],
+      "checksum": "dde347d6b20e131d"
+    },
+    {
+      "id": "workflow.6741928",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Security Audit Pipeline",
+      "description": "Automated security posture check: scans for critical vulnerabilities, audits codebase hardening, reviews open PRs, and produces a unified risk report.",
+      "category": "devops",
+      "tags": [
+        "security",
+        "audit",
+        "ci",
+        "weekly"
+      ],
+      "status": "active",
+      "path": "workflows/devops/wf-6741928",
+      "media": [
+        "workflows/devops/wf-6741928/icon.svg"
+      ],
+      "checksum": "8f2a5071260be3b9"
+    },
+    {
+      "id": "workflow.8273645",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Content Factory Pipeline",
+      "description": "Full content lifecycle in one run: ideation → writing → carousel creation → scheduling → performance analysis. Produces a week of content.",
+      "category": "marketing",
+      "tags": [
+        "content",
+        "pipeline",
+        "automation",
+        "weekly"
+      ],
+      "status": "active",
+      "path": "workflows/marketing/wf-8273645",
+      "media": [
+        "workflows/marketing/wf-8273645/icon.svg"
+      ],
+      "checksum": "027917b5137965b8"
+    },
+    {
+      "id": "workflow.9384756",
+      "type": "workflow",
+      "version": "1.0.0",
+      "name": "Executive Morning Routine",
+      "description": "Daily executive briefing: morning summary → focus priorities → inbox triage → calendar check → personal finance update. Your AI chief of staff.",
+      "category": "productivity",
+      "tags": [
+        "executive",
+        "morning",
+        "daily",
+        "routine"
+      ],
+      "status": "active",
+      "path": "workflows/productivity/wf-9384756",
+      "media": [
+        "workflows/productivity/wf-9384756/icon.svg"
+      ],
+      "checksum": "dfd9210f3cbee427"
     },
     {
       "id": "workflow.code-review-pipeline",

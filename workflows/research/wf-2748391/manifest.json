@@ -1,0 +1,142 @@
+{
+  "id": "workflow.2748391",
+  "type": "workflow",
+  "version": "1.0.0",
+  "name": "Competitive Intelligence Sweep",
+  "description": "Full competitive landscape scan: competitor ads, pricing changes, YouTube strategy, industry trends. Synthesized into one intelligence report.",
+  "category": "research",
+  "tags": [
+    "competitive",
+    "intelligence",
+    "research",
+    "weekly"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Competitive Intelligence Sweep icon"
+    }
+  },
+  "workflow": {
+    "description": "Full competitive landscape scan: competitor ads, pricing changes, YouTube strategy, industry trends. Synthesized into one intelligence report.",
+    "triggers": [
+      {
+        "type": "schedule",
+        "description": "Every Monday at 7:00am",
+        "config": {
+          "cron": "0 7 * * 1"
+        }
+      },
+      {
+        "type": "manual"
+      }
+    ],
+    "agents": [
+      {
+        "agentId": "agent.5422127",
+        "role": "Scan competitor ads",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.6930001",
+        "role": "Track pricing changes",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.9960439",
+        "role": "Analyze YouTube strategy",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.4213840",
+        "role": "Aggregate industry news",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.8340390",
+        "role": "Deep research on key topics",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "parallel",
+        "name": "gather-intel",
+        "children": [
+          {
+            "type": "agent",
+            "name": "check-ads",
+            "agentId": "agent.5422127",
+            "output": {
+              "ads": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "check-pricing",
+            "agentId": "agent.6930001",
+            "output": {
+              "pricing": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "check-youtube",
+            "agentId": "agent.9960439",
+            "output": {
+              "youtube": "result"
+            }
+          },
+          {
+            "type": "agent",
+            "name": "check-industry",
+            "agentId": "agent.4213840",
+            "output": {
+              "industry": "result"
+            }
+          }
+        ],
+        "next": "synthesize"
+      },
+      {
+        "type": "agent",
+        "name": "synthesize",
+        "agentId": "agent.8340390",
+        "input": {
+          "intel": "gather-intel.*"
+        },
+        "output": {
+          "report": "result"
+        },
+        "next": "report"
+      },
+      {
+        "type": "notify",
+        "name": "report",
+        "input": {
+          "message": "synthesize.report"
+        }
+      }
+    ],
+    "permissions": [
+      "network.api",
+      "fs.write"
+    ]
+  }
+}

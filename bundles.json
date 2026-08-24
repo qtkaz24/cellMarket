@@ -1,0 +1,108 @@
+{
+  "bundles": [
+    {
+      "id": "bundle.growth-starter",
+      "name": "Growth Starter",
+      "description": "Essential tools for early-stage growth: content creation, social scheduling, competitor monitoring, and analytics.",
+      "category": "marketing",
+      "tags": ["growth", "starter", "marketing"],
+      "agents": [
+        "agent.7048139",
+        "agent.5130243",
+        "agent.2169231",
+        "agent.5422127"
+      ],
+      "workflows": [
+        "workflow.8273645"
+      ]
+    },
+    {
+      "id": "bundle.revenue-machine",
+      "name": "Revenue Machine",
+      "description": "Full sales pipeline automation: prospecting, intent detection, meeting booking, deal management, and commission tracking.",
+      "category": "sales",
+      "tags": ["sales", "pipeline", "revenue"],
+      "agents": [
+        "agent.2175062",
+        "agent.4548475",
+        "agent.1523153",
+        "agent.8059809",
+        "agent.9336015",
+        "agent.4391191"
+      ],
+      "workflows": [
+        "workflow.5192834"
+      ]
+    },
+    {
+      "id": "bundle.executive-suite",
+      "name": "Executive Suite",
+      "description": "AI chief of staff: daily briefings, inbox management, calendar optimization, and personal finance oversight.",
+      "category": "productivity",
+      "tags": ["executive", "productivity", "daily"],
+      "agents": [
+        "agent.6314455",
+        "agent.9807576",
+        "agent.7269520",
+        "agent.3344668",
+        "agent.4257351",
+        "agent.9768995"
+      ],
+      "workflows": [
+        "workflow.9384756"
+      ]
+    },
+    {
+      "id": "bundle.security-first",
+      "name": "Security First",
+      "description": "Proactive security: vulnerability scanning, code hardening, PR reviews, and compliance auditing.",
+      "category": "devops",
+      "tags": ["security", "devops", "compliance"],
+      "agents": [
+        "agent.9014962",
+        "agent.2950032",
+        "agent.8086657",
+        "agent.4391191",
+        "agent.4241128"
+      ],
+      "workflows": [
+        "workflow.6741928"
+      ]
+    },
+    {
+      "id": "bundle.digital-detox",
+      "name": "Digital Detox",
+      "description": "Clean up your digital life: email cleanup, unsubscriptions, refund hunting, and subscription auditing.",
+      "category": "personal",
+      "tags": ["personal", "cleanup", "wellness"],
+      "agents": [
+        "agent.8901602",
+        "agent.2141384",
+        "agent.6755500",
+        "agent.4859189",
+        "agent.2404559",
+        "agent.3995998",
+        "agent.9535124"
+      ],
+      "workflows": []
+    },
+    {
+      "id": "bundle.content-engine",
+      "name": "Content Engine",
+      "description": "Full content factory: ideation, writing, video planning, carousels, scheduling, and performance analytics.",
+      "category": "marketing",
+      "tags": ["content", "creation", "marketing"],
+      "agents": [
+        "agent.7048139",
+        "agent.1461662",
+        "agent.9196757",
+        "agent.9587372",
+        "agent.5130243",
+        "agent.2169231"
+      ],
+      "workflows": [
+        "workflow.8273645"
+      ]
+    }
+  ]
+}
