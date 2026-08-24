@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, extname, basename } from 'node:path';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
@@ -31,17 +31,19 @@ function findAllManifests() {
 
 function computeChecksum(filePath) {
   try {
-    const content = readFileSync(filePath);
+    const content = readFileSync(filePath, 'utf-8').replace(/\r\n?/g, '\n');
     return createHash('sha256').update(content).digest('hex').slice(0, 16);
   } catch {
     return null;
   }
 }
 
-function collectMediaFiles(manifestPath, manifest) {
-  const dir = manifestPath.replace(/\/manifest\.json$/, '');
+function toCatalogPath(path) {
+  return path.replaceAll('\\', '/');
+}
+
+function collectMediaFiles(dir, manifest) {
   const media = [];
-  const mediaDir = join(ROOT, dir, 'media');
 
   if (manifest.media?.icon?.src) {
     media.push({ type: 'icon', path: `${dir}/${manifest.media.icon.src}` });
@@ -70,9 +72,10 @@ function buildIndex() {
   const entries = [];
 
   for (const manifestPath of manifests) {
-    const relPath = relative(ROOT, manifestPath);
+    const relPath = toCatalogPath(relative(ROOT, manifestPath));
+    const entryPath = relPath.replace(/\/manifest\.json$/, '');
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
-    const media = collectMediaFiles(relPath.replace(/\/manifest\.json$/, ''), manifest);
+    const media = collectMediaFiles(entryPath, manifest);
 
     const entry = {
       id: manifest.id,
@@ -83,7 +86,7 @@ function buildIndex() {
       category: manifest.category,
       tags: manifest.tags || [],
       status: manifest.status,
-      path: relPath.replace(/\/manifest\.json$/, ''),
+      path: entryPath,
       media: media.map(m => m.path),
       checksum: computeChecksum(manifestPath),
     };
@@ -98,9 +101,21 @@ function buildIndex() {
     return a.version.localeCompare(b.version);
   });
 
+  let generatedAt = new Date().toISOString();
+  if (existsSync(OUTPUT)) {
+    try {
+      const previous = JSON.parse(readFileSync(OUTPUT, 'utf-8'));
+      if (JSON.stringify(previous.entries) === JSON.stringify(entries) && previous.generatedAt) {
+        generatedAt = previous.generatedAt;
+      }
+    } catch {
+      // A malformed or missing prior index is replaced with a fresh timestamp.
+    }
+  }
+
   const index = {
     $schema: 'schemas/index.schema.json',
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     totalEntries: entries.length,
     entries,
   };

@@ -36,7 +36,8 @@
       }
     ],
     "permissions": [
-      "fs.read"
+      "fs.read",
+      "terminal.run"
     ]
   },
   "integrations": [

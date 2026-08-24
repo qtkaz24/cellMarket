@@ -54,7 +54,7 @@
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string", "maxLength": 100 },
-        "url": { "type": "string", "format": "uri" }
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" }
       }
     },
     "license": { "type": "string" },

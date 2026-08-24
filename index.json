@@ -1,6 +1,6 @@
 {
   "$schema": "schemas/index.schema.json",
-  "generatedAt": "2026-08-24T15:37:31.721Z",
+  "generatedAt": "2026-08-24T16:28:21.285Z",
   "totalEntries": 70,
   "entries": [
     {
@@ -114,7 +114,7 @@
       "media": [
         "agents/marketing/analytics-brief/icon.svg"
       ],
-      "checksum": "caf2df2c02389144"
+      "checksum": "33675bb45ccefa3c"
     },
     {
       "id": "agent.2175062",
@@ -244,7 +244,7 @@
       "media": [
         "agents/marketing/social-operator/icon.svg"
       ],
-      "checksum": "c8fc4f6a10823b54"
+      "checksum": "f23e3d56a6e66c59"
     },
     {
       "id": "agent.3689355",
@@ -262,7 +262,7 @@
       "media": [
         "agents/marketing/affiliate-manager/icon.svg"
       ],
-      "checksum": "9ccc9f837f87a910"
+      "checksum": "54165c485bb99986"
     },
     {
       "id": "agent.3995998",
@@ -353,7 +353,7 @@
       "media": [
         "agents/devops/commission-auditor/icon.svg"
       ],
-      "checksum": "11602705eb14d2ac"
+      "checksum": "25db94930a3206b7"
     },
     {
       "id": "agent.4459577",
@@ -507,7 +507,7 @@
       "media": [
         "agents/marketing/social-scheduler/icon.svg"
       ],
-      "checksum": "37e49e5c3d2a04cb"
+      "checksum": "28c3654b29a206c8"
     },
     {
       "id": "agent.5422127",
@@ -918,7 +918,7 @@
       "media": [
         "agents/marketing/carousel-creator/icon.svg"
       ],
-      "checksum": "2d8ffee9187cf1f2"
+      "checksum": "354a33b8288626fa"
     },
     {
       "id": "agent.9768995",

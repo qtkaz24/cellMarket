@@ -37,7 +37,9 @@
     ],
     "permissions": [
       "fs.read",
-      "fs.write"
+      "fs.write",
+      "network.mcp",
+      "terminal.run"
     ]
   },
   "integrations": [

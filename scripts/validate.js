@@ -1,5 +1,5 @@
 import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs';
-import { join, relative, resolve, extname } from 'node:path';
+import { dirname, extname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
@@ -16,6 +16,41 @@ const SCHEMA_MAP = {
 const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024;
 const MAX_MANIFEST_SIZE_BYTES = 100 * 1024;
 const ALLOWED_MEDIA_EXTS = ['.svg', '.png', '.webp', '.avif', '.jpg'];
+const ALLOWED_PERMISSIONS = new Set([
+  'fs.read',
+  'fs.write',
+  'network.api',
+  'network.mcp',
+  'plugin.install',
+  'skill.install',
+  'terminal',
+  'terminal.run',
+]);
+const INSTRUCTION_CAPABILITY_RULES = [
+  {
+    permission: 'terminal.run',
+    pattern: /\b(?:npx|npm\s+(?:install|i)|pnpm\s+(?:add|install)|yarn\s+add|pip3?\s+install|brew\s+install)\b/i,
+  },
+  {
+    permission: 'terminal.run',
+    pattern: /(?:\b(?:curl|wget)\b[^\n|;&]*(?:\||&&|;)\s*(?:sh|bash|zsh)\b|\b(?:irm|iwr|Invoke-WebRequest)\b[^\n|]*\|\s*(?:iex|Invoke-Expression)\b)/i,
+  },
+  {
+    permission: 'skill.install',
+    pattern: /\b(?:npx\s+)?skills?\s+(?:add|install)\b/i,
+  },
+];
+const UNSAFE_SVG_PATTERNS = [
+  /<script\b/i,
+  /<foreignObject\b/i,
+  /<(?:iframe|object|embed)\b/i,
+  /<!DOCTYPE\b|<!ENTITY\b/i,
+  /\bon[a-z]+\s*=/i,
+  /javascript\s*:|data\s*:\s*text\/html/i,
+  /@import\b/i,
+  /(?:xlink:)?href\s*=\s*["']\s*(?!#)/i,
+  /url\(\s*["']?\s*(?:https?:|data:|file:|\/\/)/i,
+];
 
 const ajv = new Ajv({ allErrors: true, strict: false, removeAdditional: false });
 addFormats(ajv);
@@ -48,6 +83,18 @@ function loadJson(filePath) {
     error(filePath, `Invalid JSON: ${e.message}`);
     return null;
   }
+}
+
+function validateSvgContent(filePath, svgPath) {
+  if (extname(svgPath).toLowerCase() !== '.svg') return true;
+
+  const content = readFileSync(svgPath, 'utf-8');
+  if (UNSAFE_SVG_PATTERNS.some(pattern => pattern.test(content))) {
+    error(filePath, `Unsafe SVG content: ${relative(ROOT, svgPath)}`);
+    return false;
+  }
+
+  return true;
 }
 
 function validateSchema(filePath, manifest, type) {
@@ -106,7 +153,7 @@ function validateVersion(filePath, manifest) {
 }
 
 function validateMediaFiles(filePath, manifest) {
-  const dir = join(ROOT, filePath.replace(/\/manifest\.json$/, ''));
+  const dir = join(ROOT, dirname(filePath));
   const media = manifest.media;
   if (!media) return true;
 
@@ -148,7 +195,10 @@ function validateMediaFiles(filePath, manifest) {
     const stat = statSync(expected);
     if (stat.size > MAX_FILE_SIZE_BYTES) {
       error(filePath, `Media file too large (${(stat.size / 1024 / 1024).toFixed(1)}MB > 10MB): ${label}`);
+      continue;
     }
+
+    validateSvgContent(filePath, expected);
   }
 
   // Check for unexpected files in media/
@@ -185,8 +235,21 @@ function validatePermissions(filePath, manifest) {
   for (const p of perms) {
     if (typeof p !== 'string' || !/^[a-z][a-z0-9.]*$/.test(p)) {
       error(filePath, `Invalid permission format: "${p}"`);
+    } else if (!ALLOWED_PERMISSIONS.has(p)) {
+      error(filePath, `Unknown permission: "${p}"`);
     }
   }
+
+  const instructions = [manifest.longDescription, manifest.agent?.instructions]
+    .filter(value => typeof value === 'string')
+    .join('\n');
+  const declared = new Set(perms);
+  for (const { permission, pattern } of INSTRUCTION_CAPABILITY_RULES) {
+    if (pattern.test(instructions) && !declared.has(permission)) {
+      error(filePath, `Instructions require permission "${permission}"`);
+    }
+  }
+
   return true;
 }
 
@@ -234,7 +297,7 @@ function validateSecurity(filePath, manifest) {
     error(filePath, `Manifest too large (${(content.length / 1024).toFixed(1)}KB > 100KB)`);
   }
 
-  const dir = join(ROOT, filePath.replace(/\/manifest\.json$/, ''));
+  const dir = join(ROOT, dirname(filePath));
   if (!dir.startsWith(ROOT)) {
     error(filePath, 'Path traversal detected');
   }

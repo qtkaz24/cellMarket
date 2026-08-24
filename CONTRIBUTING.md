@@ -60,6 +60,17 @@ Media rules:
 - **Max file size**: 10MB per file
 - **Max images**: 20
 - **Paths**: Always relative, no `..`, no absolute URLs
+- **SVG safety**: no scripts, event handlers, external references, embedded HTML, entities, or remote CSS
+
+## Security and capability declarations
+
+- Every URL must use `https://`.
+- Instructions that invoke `npm`, `npx`, `pnpm`, `yarn`, `pip`, or `brew` must request `terminal.run`.
+- Installing a skill or plugin must additionally request `skill.install` or `plugin.install`.
+- Remote MCP integrations must request `network.mcp`.
+- A requested permission is never an automatic grant; the host must still ask the user.
+- Never commit credentials, tokens, private endpoints, personal data, or real customer content.
+- Marketplace instructions must not silently download or execute software.
 
 ## Updating an Agent
 
