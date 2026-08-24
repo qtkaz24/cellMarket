@@ -1,0 +1,84 @@
+{
+  "id": "team.growth-engine",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Growth Engine",
+  "description": "End-to-end revenue machine: content creation drives traffic, traffic converts to leads, leads close into deals. Each agent hands off context to the next.",
+  "category": "marketing",
+  "tags": [
+    "growth",
+    "revenue",
+    "marketing",
+    "sales",
+    "pipeline"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Growth Engine team icon"
+    }
+  },
+  "team": {
+    "description": "End-to-end revenue machine: content creation drives traffic, traffic converts to leads, leads close into deals. Each agent hands off context to the next.",
+    "members": [
+      {
+        "agentId": "agent.content-idea-generator",
+        "role": "Strategic ideation — identifies what content will drive qualified traffic",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.video-strategist",
+        "role": "Video production planning — turns ideas into video briefs and scripts",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.social-media-manager",
+        "role": "Distribution — publishes across platforms and monitors engagement",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.buyer-intent-reply-queue",
+        "role": "Intent capture — identifies buying signals and queues personalized outreach",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.linkedin-icp-prospect-tracker",
+        "role": "Prospect discovery — finds ICP matches on LinkedIn and enriches profiles",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.deal-desk-autopilot",
+        "role": "Deal progression — moves stalled deals, drafts follow-ups, books meetings",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "sequential",
+      "maxConcurrent": 3,
+      "timeout": 1800
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Shared pipeline context: content performance feeds into prospect targeting, prospect signals feed into deal strategy."
+    }
+  }
+}

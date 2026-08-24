@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="#9b59b6"/>
+  <text x="16" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="white">S&</text>
+  <text x="16" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.7)">5 agents</text>
+</svg>

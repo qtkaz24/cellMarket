@@ -1,0 +1,77 @@
+{
+  "id": "team.revenue-ops",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Revenue Operations",
+  "description": "Protects and optimizes revenue: books meetings, runs pipeline, audits commission leaks, and ensures customer satisfaction post-sale.",
+  "category": "sales",
+  "tags": [
+    "revops",
+    "pipeline",
+    "commission",
+    "retention"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Revenue Operations team icon"
+    }
+  },
+  "team": {
+    "description": "Protects and optimizes revenue: books meetings, runs pipeline, audits commission leaks, and ensures customer satisfaction post-sale.",
+    "members": [
+      {
+        "agentId": "agent.prospect-meeting-booker",
+        "role": "Meeting coordination — qualifies prospects and books discovery calls",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.booking-pipeline-runner",
+        "role": "Pipeline automation — moves deals through stages, triggers follow-ups",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.deal-desk-autopilot",
+        "role": "Deal intelligence — identifies risks, missing info, and next actions per deal",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.commission-leak-auditor",
+        "role": "Revenue protection — audits commission tracking and identifies discrepancies",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.support-resolution-agent",
+        "role": "Post-sale retention — handles support escalations that impact renewals",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "collaborative",
+      "maxConcurrent": 3,
+      "timeout": 1200
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Shared deal context: meeting notes flow into pipeline, pipeline health flows into commission audits."
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "team.security-compliance",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Security & Compliance",
+  "description": "Proactive security posture: watches for vulnerabilities, fixes critical issues via PRs, hardens codebase, and audits financial compliance.",
+  "category": "devops",
+  "tags": [
+    "security",
+    "compliance",
+    "devops",
+    "audit"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Security & Compliance team icon"
+    }
+  },
+  "team": {
+    "description": "Proactive security posture: watches for vulnerabilities, fixes critical issues via PRs, hardens codebase, and audits financial compliance.",
+    "members": [
+      {
+        "agentId": "agent.critical-security-fixer",
+        "role": "Incident response — detects critical vulns and opens fix PRs automatically",
+        "permissions": [
+          "network.api",
+          "fs.read",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.codebase-hardening-auditor",
+        "role": "Hardening — audits codebase for security anti-patterns and suggests fixes",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.ci-code-review-bot",
+        "role": "Code review — catches bugs, security issues, and maintainability problems in PRs",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.commission-leak-auditor",
+        "role": "Financial compliance — audits commission tracking for discrepancies",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.class-action-matcher",
+        "role": "Legal compliance — identifies class action settlements you may be eligible for",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "parallel",
+      "maxConcurrent": 4,
+      "timeout": 1800
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Security posture: all findings feed into a unified risk dashboard with severity rankings."
+    }
+  }
+}

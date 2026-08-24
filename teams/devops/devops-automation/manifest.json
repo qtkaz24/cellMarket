@@ -1,0 +1,88 @@
+{
+  "id": "team.devops-automation",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "DevOps Automation",
+  "description": "Development workflow automation: CI/CD pipelines, code review, automation scouting, and agent fleet management. Keeps the machine running.",
+  "category": "devops",
+  "tags": [
+    "devops",
+    "ci-cd",
+    "automation",
+    "agents"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "DevOps Automation team icon"
+    }
+  },
+  "team": {
+    "description": "Development workflow automation: CI/CD pipelines, code review, automation scouting, and agent fleet management. Keeps the machine running.",
+    "members": [
+      {
+        "agentId": "agent.ci-code-review-bot",
+        "role": "Automated review — catches issues before they reach production",
+        "permissions": [
+          "network.api",
+          "fs.read"
+        ]
+      },
+      {
+        "agentId": "agent.automation-scout",
+        "role": "Opportunity finder — identifies repetitive tasks that should be automated",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.agent-work-logger",
+        "role": "Activity logging — tracks what agents do for auditing and optimization",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.persistent-bot-memory",
+        "role": "Memory management — maintains agent context across sessions",
+        "permissions": [
+          "fs.read",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.frontend-engineer",
+        "role": "UI implementation — builds and maintains the platform frontend",
+        "permissions": [
+          "fs.read",
+          "fs.write",
+          "terminal"
+        ]
+      },
+      {
+        "agentId": "agent.design-engineer",
+        "role": "Design system — creates and maintains component libraries and design tokens",
+        "permissions": [
+          "network.api",
+          "fs.read",
+          "fs.write"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "collaborative",
+      "maxConcurrent": 3,
+      "timeout": 1800
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "workspace",
+      "description": "Dev context: code review findings inform automation opportunities, work logs inform agent optimization."
+    }
+  }
+}

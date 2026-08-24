@@ -1,0 +1,78 @@
+{
+  "id": "team.customer-success",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Customer Success",
+  "description": "Full customer lifecycle: support resolution → knowledge base updates → retention programs → expansion through affiliates and sponsorships.",
+  "category": "success",
+  "tags": [
+    "support",
+    "retention",
+    "knowledge-base",
+    "expansion"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Customer Success team icon"
+    }
+  },
+  "team": {
+    "description": "Full customer lifecycle: support resolution → knowledge base updates → retention programs → expansion through affiliates and sponsorships.",
+    "members": [
+      {
+        "agentId": "agent.support-resolution-agent",
+        "role": "Support triage — classifies, prioritizes, and resolves customer issues",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.support-reply-drafter",
+        "role": "Response drafting — creates empathetic, accurate support responses",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.help-center-updater",
+        "role": "Knowledge base — updates documentation based on resolved issues and FAQs",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.affiliate-program-manager",
+        "role": "Affiliate growth — manages affiliate relationships and optimizes commission structures",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.sponsorship-negotiator",
+        "role": "Partnership deals — identifies and negotiates sponsorship opportunities",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "collaborative",
+      "maxConcurrent": 3,
+      "timeout": 1200
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Customer context: support tickets inform knowledge base updates, resolved issues inform affiliate training materials."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "team.digital-hygiene",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Digital Hygiene",
+  "description": "Cleans and optimizes your digital life: unsubscribes from junk, purges old emails, tracks subscriptions, recovers refunds, and manages gift cards.",
+  "category": "personal",
+  "tags": [
+    "email",
+    "cleanup",
+    "subscriptions",
+    "refunds",
+    "personal"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Digital Hygiene team icon"
+    }
+  },
+  "team": {
+    "description": "Cleans and optimizes your digital life: unsubscribes from junk, purges old emails, tracks subscriptions, recovers refunds, and manages gift cards.",
+    "members": [
+      {
+        "agentId": "agent.digital-cleaner",
+        "role": "Deep clean — organizes Drive, archives old files, removes duplicates",
+        "permissions": [
+          "network.api",
+          "fs.read",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.mail-cleanup-assistant",
+        "role": "Mail optimization — categorizes, archives, and sets up filters",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.email-purger",
+        "role": "Bulk purge — identifies and removes years of accumulated email clutter",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.marketing-email-unsubscriber",
+        "role": "Unsubscribe automation — identifies and unsubscribes from marketing lists",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.subscription-cancellation-advisor",
+        "role": "Subscription audit — identifies unused subscriptions and guides cancellation",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.refund-hunter",
+        "role": "Refund recovery — finds price drops and eligibility for refunds",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.gift-card-and-return-tracker",
+        "role": "Gift card & returns — tracks balances, return windows, and pending refunds",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "parallel",
+      "maxConcurrent": 4,
+      "timeout": 1200
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "session",
+      "description": "Cleanup context: all digital hygiene tasks share a unified view of what needs attention."
+    }
+  }
+}

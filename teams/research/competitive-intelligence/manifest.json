@@ -1,0 +1,76 @@
+{
+  "id": "team.competitive-intelligence",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Competitive Intelligence",
+  "description": "Monitors the competitive landscape: ad strategies, pricing changes, YouTube presence, and industry trends. Produces actionable intelligence reports.",
+  "category": "research",
+  "tags": [
+    "competitive",
+    "intelligence",
+    "research",
+    "monitoring"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Competitive Intelligence team icon"
+    }
+  },
+  "team": {
+    "description": "Monitors the competitive landscape: ad strategies, pricing changes, YouTube presence, and industry trends. Produces actionable intelligence reports.",
+    "members": [
+      {
+        "agentId": "agent.competitor-ad-watch",
+        "role": "Ad intelligence — tracks competitor ad creatives, spend, and messaging",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.competitor-pricing-watch",
+        "role": "Pricing intelligence — monitors competitor pricing changes and positioning",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.youtube-competitor-tracker",
+        "role": "Video intelligence — analyzes competitor YouTube strategy and performance",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.industry-intel-digest",
+        "role": "Industry trends — aggregates news, reports, and market signals",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.deep-research",
+        "role": "Deep analysis — produces structured reports with citations and confidence assessments",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "parallel",
+      "maxConcurrent": 5,
+      "timeout": 1800
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "task",
+      "description": "Intelligence brief: all monitoring feeds are synthesized into a single competitive landscape report."
+    }
+  }
+}

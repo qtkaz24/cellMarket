@@ -1,7 +1,7 @@
 {
   "$schema": "schemas/index.schema.json",
-  "generatedAt": "2026-08-24T15:11:52.418Z",
-  "totalEntries": 54,
+  "generatedAt": "2026-08-24T15:19:09.652Z",
+  "totalEntries": 64,
   "entries": [
     {
       "id": "agent.ad-pacing-digest",
@@ -977,6 +977,128 @@
       "checksum": "3b8b41d9b44cb184"
     },
     {
+      "id": "team.competitive-intelligence",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Competitive Intelligence",
+      "description": "Monitors the competitive landscape: ad strategies, pricing changes, YouTube presence, and industry trends. Produces actionable intelligence reports.",
+      "category": "research",
+      "tags": [
+        "competitive",
+        "intelligence",
+        "research",
+        "monitoring"
+      ],
+      "status": "active",
+      "path": "teams/research/competitive-intelligence",
+      "media": [
+        "teams/research/competitive-intelligence/icon.svg"
+      ],
+      "checksum": "d786739d46270889"
+    },
+    {
+      "id": "team.content-factory",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Content Factory",
+      "description": "Full content lifecycle: ideation → creation → scheduling → publishing → performance analysis. Produces a consistent content calendar across all platforms.",
+      "category": "marketing",
+      "tags": [
+        "content",
+        "creation",
+        "publishing",
+        "analytics"
+      ],
+      "status": "active",
+      "path": "teams/marketing/content-factory",
+      "media": [
+        "teams/marketing/content-factory/icon.svg"
+      ],
+      "checksum": "444b3c6ef29cb0f5"
+    },
+    {
+      "id": "team.customer-success",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Customer Success",
+      "description": "Full customer lifecycle: support resolution → knowledge base updates → retention programs → expansion through affiliates and sponsorships.",
+      "category": "success",
+      "tags": [
+        "support",
+        "retention",
+        "knowledge-base",
+        "expansion"
+      ],
+      "status": "active",
+      "path": "teams/success/customer-success",
+      "media": [
+        "teams/success/customer-success/icon.svg"
+      ],
+      "checksum": "45d68e224868400a"
+    },
+    {
+      "id": "team.devops-automation",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "DevOps Automation",
+      "description": "Development workflow automation: CI/CD pipelines, code review, automation scouting, and agent fleet management. Keeps the machine running.",
+      "category": "devops",
+      "tags": [
+        "devops",
+        "ci-cd",
+        "automation",
+        "agents"
+      ],
+      "status": "active",
+      "path": "teams/devops/devops-automation",
+      "media": [
+        "teams/devops/devops-automation/icon.svg"
+      ],
+      "checksum": "341fdfd016730e2d"
+    },
+    {
+      "id": "team.digital-hygiene",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Digital Hygiene",
+      "description": "Cleans and optimizes your digital life: unsubscribes from junk, purges old emails, tracks subscriptions, recovers refunds, and manages gift cards.",
+      "category": "personal",
+      "tags": [
+        "email",
+        "cleanup",
+        "subscriptions",
+        "refunds",
+        "personal"
+      ],
+      "status": "active",
+      "path": "teams/personal/digital-hygiene",
+      "media": [
+        "teams/personal/digital-hygiene/icon.svg"
+      ],
+      "checksum": "fe0e0a96f07e5447"
+    },
+    {
+      "id": "team.executive-office",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Executive Office",
+      "description": "Personal AI chief of staff: morning briefings, calendar optimization, inbox management, and financial oversight. Runs your daily operating rhythm.",
+      "category": "productivity",
+      "tags": [
+        "executive",
+        "calendar",
+        "email",
+        "finance",
+        "productivity"
+      ],
+      "status": "active",
+      "path": "teams/productivity/executive-office",
+      "media": [
+        "teams/productivity/executive-office/icon.svg"
+      ],
+      "checksum": "84632f13bc989fd3"
+    },
+    {
       "id": "team.full-stack-team",
       "type": "team",
       "version": "1.0.0",
@@ -992,6 +1114,87 @@
       "path": "teams/coding/full-stack-team",
       "media": [],
       "checksum": "37c8a85003648c57"
+    },
+    {
+      "id": "team.growth-engine",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Growth Engine",
+      "description": "End-to-end revenue machine: content creation drives traffic, traffic converts to leads, leads close into deals. Each agent hands off context to the next.",
+      "category": "marketing",
+      "tags": [
+        "growth",
+        "revenue",
+        "marketing",
+        "sales",
+        "pipeline"
+      ],
+      "status": "active",
+      "path": "teams/marketing/growth-engine",
+      "media": [
+        "teams/marketing/growth-engine/icon.svg"
+      ],
+      "checksum": "e45cb88d773e84de"
+    },
+    {
+      "id": "team.revenue-ops",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Revenue Operations",
+      "description": "Protects and optimizes revenue: books meetings, runs pipeline, audits commission leaks, and ensures customer satisfaction post-sale.",
+      "category": "sales",
+      "tags": [
+        "revops",
+        "pipeline",
+        "commission",
+        "retention"
+      ],
+      "status": "active",
+      "path": "teams/sales/revenue-ops",
+      "media": [
+        "teams/sales/revenue-ops/icon.svg"
+      ],
+      "checksum": "64f0ab2162139707"
+    },
+    {
+      "id": "team.sales-intelligence",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Sales Intelligence",
+      "description": "Data-driven prospecting: finds ICP matches, tracks intent signals, qualifies leads, and books meetings. Full top-of-funnel automation.",
+      "category": "sales",
+      "tags": [
+        "prospecting",
+        "leads",
+        "intent",
+        "meetings"
+      ],
+      "status": "active",
+      "path": "teams/sales/sales-intelligence",
+      "media": [
+        "teams/sales/sales-intelligence/icon.svg"
+      ],
+      "checksum": "efe614ad7c8e28c4"
+    },
+    {
+      "id": "team.security-compliance",
+      "type": "team",
+      "version": "1.0.0",
+      "name": "Security & Compliance",
+      "description": "Proactive security posture: watches for vulnerabilities, fixes critical issues via PRs, hardens codebase, and audits financial compliance.",
+      "category": "devops",
+      "tags": [
+        "security",
+        "compliance",
+        "devops",
+        "audit"
+      ],
+      "status": "active",
+      "path": "teams/devops/security-compliance",
+      "media": [
+        "teams/devops/security-compliance/icon.svg"
+      ],
+      "checksum": "383a8915e56754f5"
     },
     {
       "id": "workflow.code-review-pipeline",

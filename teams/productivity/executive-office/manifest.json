@@ -1,0 +1,84 @@
+{
+  "id": "team.executive-office",
+  "type": "team",
+  "version": "1.0.0",
+  "name": "Executive Office",
+  "description": "Personal AI chief of staff: morning briefings, calendar optimization, inbox management, and financial oversight. Runs your daily operating rhythm.",
+  "category": "productivity",
+  "tags": [
+    "executive",
+    "calendar",
+    "email",
+    "finance",
+    "productivity"
+  ],
+  "author": {
+    "name": "Agent Marketplace"
+  },
+  "license": "MIT",
+  "status": "active",
+  "media": {
+    "icon": {
+      "src": "icon.svg",
+      "alt": "Executive Office team icon"
+    }
+  },
+  "team": {
+    "description": "Personal AI chief of staff: morning briefings, calendar optimization, inbox management, and financial oversight. Runs your daily operating rhythm.",
+    "members": [
+      {
+        "agentId": "agent.daily-briefing",
+        "role": "Morning briefing — synthesizes calendar, priorities, and overnight developments",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.daily-focus-adviser",
+        "role": "Focus optimization — identifies the 3 most important tasks for the day",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.inbox-zero-assistant",
+        "role": "Email management — triages, drafts replies, and cleans inbox",
+        "permissions": [
+          "network.api",
+          "fs.write"
+        ]
+      },
+      {
+        "agentId": "agent.email-briefing-assistant",
+        "role": "Email digest — summarizes important emails and action items",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.meeting-double",
+        "role": "Calendar optimization — prevents double-bookings, optimizes meeting blocks",
+        "permissions": [
+          "network.api"
+        ]
+      },
+      {
+        "agentId": "agent.personal-cfo",
+        "role": "Financial oversight — morning portfolio briefing, rebalancing alerts, market events",
+        "permissions": [
+          "network.api"
+        ]
+      }
+    ],
+    "orchestration": {
+      "strategy": "sequential",
+      "maxConcurrent": 2,
+      "timeout": 900
+    },
+    "sharedContext": {
+      "enabled": true,
+      "scope": "session",
+      "description": "Daily operating context: calendar feeds into focus priorities, email feeds into meeting prep, finance feeds into decision context."
+    }
+  }
+}
