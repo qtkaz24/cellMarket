@@ -97,8 +97,8 @@
             "properties": {
               "agentId": {
                 "type": "string",
-                "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
-                "description": "Agent template ID used in this workflow."
+                "pattern": "^agent\\.[0-9]+$",
+                "description": "Stable numeric agent ID."
               },
               "version": {
                 "type": "string",

@@ -26,21 +26,21 @@
     "description": "Protects and optimizes revenue: books meetings, runs pipeline, audits commission leaks, and ensures customer satisfaction post-sale.",
     "members": [
       {
-        "agentId": "agent.meeting-booker",
+        "agentId": "agent.1523153",
         "role": "Meeting coordination — qualifies prospects and books discovery calls",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.pipeline-runner",
+        "agentId": "agent.8059809",
         "role": "Pipeline automation — moves deals through stages, triggers follow-ups",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.deal-manager",
+        "agentId": "agent.9336015",
         "role": "Deal intelligence — identifies risks, missing info, and next actions per deal",
         "permissions": [
           "network.api",
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "agentId": "agent.commission-auditor",
+        "agentId": "agent.4391191",
         "role": "Revenue protection — audits commission tracking and identifies discrepancies",
         "permissions": [
           "network.api",
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "agentId": "agent.support-resolver",
+        "agentId": "agent.6640293",
         "role": "Post-sale retention — handles support escalations that impact renewals",
         "permissions": [
           "network.api"

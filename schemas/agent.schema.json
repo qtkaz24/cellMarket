@@ -9,9 +9,9 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
-      "description": "Stable unique identifier. Must start with 'agent.' prefix.",
-      "examples": ["agent.frontend-engineer", "agent.research-analyst"]
+      "pattern": "^agent\\.[0-9]+$",
+      "description": "Stable numeric identifier. Never changes even if the agent is renamed.",
+      "examples": ["agent.8472916", "agent.1938472"]
     },
     "type": {
       "type": "string",

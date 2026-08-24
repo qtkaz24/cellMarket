@@ -26,7 +26,7 @@
     "description": "Development workflow automation: CI/CD pipelines, code review, automation scouting, and agent fleet management. Keeps the machine running.",
     "members": [
       {
-        "agentId": "agent.code-review",
+        "agentId": "agent.8086657",
         "role": "Automated review — catches issues before they reach production",
         "permissions": [
           "network.api",
@@ -34,21 +34,21 @@
         ]
       },
       {
-        "agentId": "agent.automation-scout",
+        "agentId": "agent.2922361",
         "role": "Opportunity finder — identifies repetitive tasks that should be automated",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.work-logger",
+        "agentId": "agent.5926654",
         "role": "Activity logging — tracks what agents do for auditing and optimization",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.memory-manager",
+        "agentId": "agent.6478702",
         "role": "Memory management — maintains agent context across sessions",
         "permissions": [
           "fs.read",
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "agentId": "agent.frontend-engineer",
+        "agentId": "agent.4459577",
         "role": "UI implementation — builds and maintains the platform frontend",
         "permissions": [
           "fs.read",
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "agentId": "agent.design-engineer",
+        "agentId": "agent.7033779",
         "role": "Design system — creates and maintains component libraries and design tokens",
         "permissions": [
           "network.api",

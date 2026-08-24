@@ -138,8 +138,8 @@
       "properties": {
         "agentId": {
           "type": "string",
-          "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$",
-          "description": "Stable agent template ID."
+          "pattern": "^agent\\.[0-9]+$",
+          "description": "Stable numeric agent ID."
         },
         "version": {
           "type": "string",
@@ -161,7 +161,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^agent\\.[a-z0-9]+(-[a-z0-9]+)*$"
+            "pattern": "^agent\\.[0-9]+$"
           },
           "description": "Other agents this member can delegate to."
         },

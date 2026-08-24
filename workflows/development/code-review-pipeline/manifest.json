@@ -33,7 +33,7 @@
     ],
     "agents": [
       {
-        "agentId": "agent.frontend-engineer",
+        "agentId": "agent.4459577",
         "version": "^1.0.0",
         "role": "Code reviewer",
         "permissions": [
@@ -74,7 +74,7 @@
         "type": "agent",
         "name": "review",
         "description": "Analyze code quality and patterns",
-        "agentId": "agent.frontend-engineer",
+        "agentId": "agent.4459577",
         "input": {
           "files": "collect-changes.changes"
         },

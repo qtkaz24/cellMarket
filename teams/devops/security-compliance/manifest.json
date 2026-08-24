@@ -26,7 +26,7 @@
     "description": "Proactive security posture: watches for vulnerabilities, fixes critical issues via PRs, hardens codebase, and audits financial compliance.",
     "members": [
       {
-        "agentId": "agent.security-fixer",
+        "agentId": "agent.9014962",
         "role": "Incident response — detects critical vulns and opens fix PRs automatically",
         "permissions": [
           "network.api",
@@ -35,7 +35,7 @@
         ]
       },
       {
-        "agentId": "agent.code-auditor",
+        "agentId": "agent.2950032",
         "role": "Hardening — audits codebase for security anti-patterns and suggests fixes",
         "permissions": [
           "network.api",
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "agentId": "agent.code-review",
+        "agentId": "agent.8086657",
         "role": "Code review — catches bugs, security issues, and maintainability problems in PRs",
         "permissions": [
           "network.api",
@@ -51,7 +51,7 @@
         ]
       },
       {
-        "agentId": "agent.commission-auditor",
+        "agentId": "agent.4391191",
         "role": "Financial compliance — audits commission tracking for discrepancies",
         "permissions": [
           "network.api",
@@ -59,7 +59,7 @@
         ]
       },
       {
-        "agentId": "agent.class-action-finder",
+        "agentId": "agent.4241128",
         "role": "Legal compliance — identifies class action settlements you may be eligible for",
         "permissions": [
           "network.api"

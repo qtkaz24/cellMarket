@@ -27,7 +27,7 @@
     "description": "Cleans and optimizes your digital life: unsubscribes from junk, purges old emails, tracks subscriptions, recovers refunds, and manages gift cards.",
     "members": [
       {
-        "agentId": "agent.digital-cleaner",
+        "agentId": "agent.8901602",
         "role": "Deep clean — organizes Drive, archives old files, removes duplicates",
         "permissions": [
           "network.api",
@@ -36,42 +36,42 @@
         ]
       },
       {
-        "agentId": "agent.mail-cleaner",
+        "agentId": "agent.2141384",
         "role": "Mail optimization — categorizes, archives, and sets up filters",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.email-purge",
+        "agentId": "agent.6755500",
         "role": "Bulk purge — identifies and removes years of accumulated email clutter",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.unsubscriber",
+        "agentId": "agent.4859189",
         "role": "Unsubscribe automation — identifies and unsubscribes from marketing lists",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.subscription-auditor",
+        "agentId": "agent.2404559",
         "role": "Subscription audit — identifies unused subscriptions and guides cancellation",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.refund-hunter",
+        "agentId": "agent.3995998",
         "role": "Refund recovery — finds price drops and eligibility for refunds",
         "permissions": [
           "network.api"
         ]
       },
       {
-        "agentId": "agent.gift-card-tracker",
+        "agentId": "agent.9535124",
         "role": "Gift card & returns — tracks balances, return windows, and pending refunds",
         "permissions": [
           "network.api"

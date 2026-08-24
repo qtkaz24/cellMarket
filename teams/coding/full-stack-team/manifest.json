@@ -19,11 +19,11 @@
     "description": "Frontend engineer and research analyst collaborate to build informed, well-researched features.",
     "members": [
       {
-        "agentId": "agent.frontend-engineer",
+        "agentId": "agent.4459577",
         "version": "^1.0.0",
         "role": "Lead developer — builds UI and components",
         "delegates": [
-          "agent.research-analyst"
+          "agent.8340390"
         ],
         "permissions": [
           "fs.read",
@@ -32,7 +32,7 @@
         ]
       },
       {
-        "agentId": "agent.research-analyst",
+        "agentId": "agent.8340390",
         "version": "^1.0.0",
         "role": "Research specialist — investigates requirements and technologies",
         "permissions": [
